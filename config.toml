@@ -1,0 +1,25 @@
+baseURL = 'http://www.masagu.dev/'
+languageCode = 'en-us'
+title = 'Masagu.dev'
+theme = "masagu-dev-theme"
+
+
+[params]
+    title = "Masagu.dev" 
+    description = "masagu.dev is a WIP............."
+    message = "Masagu.dev is here" 
+    background = "" 
+    socialicons = [
+    {name = "github", url = "https://github.com/mariasalcedo"},    
+]
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "https://www.github.com/mariasalcedo"
+    weight = 2
+
