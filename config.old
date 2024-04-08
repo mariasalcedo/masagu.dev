@@ -1,0 +1,34 @@
+baseURL = 'http://www.masagu.dev/'
+languageCode = 'en-us'
+title = 'Masagu.dev is here.'
+theme = "masagu-dev-theme"
+
+
+[params]
+    title = "Masagu.dev is here." 
+    description = "masagu.dev is here...."
+    message = "Masagu.dev is here" 
+    release = "June 30, 2024" 
+    background = "" 
+
+socialicons = [
+    {name = "github", url = "https://github.com/mariasalcedo"},    
+] 
+
+//[menu]
+//  [[menu.main]]
+//    name = "Home"
+//    pre = "home"
+//    url = "/"
+//    weight = 1
+//  [[menu.main]]
+//    name = "Posts"
+//    pre = "pen-tool"
+//    url = "/posts/"
+//    weight = 2
+//  [[menu.main]]
+//    name = "Tags"
+//    pre = "tag"
+//    url = "/tags/"
+//    weight = 3
+

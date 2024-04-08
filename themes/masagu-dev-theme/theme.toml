@@ -1,0 +1,19 @@
+
+name = "Masagu Dev Theme"
+license = "MIT"
+licenselink = "https://github.com/mariasalcedo/masagu.dev/blob/master/themes/masagu-dev-theme/LICENSE"
+description = ""
+homepage = "http://masagu.dev/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Maria Salcedo"
+  homepage = "http://masagu.dev/"
+
+# If porting an existing theme
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

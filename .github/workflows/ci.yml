@@ -1,0 +1,40 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions: write-all
+
+env:
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy to Netlify (prod)
+        if: ${{ github.ref == 'refs/heads/main' && github.actor != 'dependabot[bot]' }}
+        id: netlify_deploy_prod
+        run: |
+          netlify deploy \
+            --dir ./public \
+            --site ${{ secrets.NETLIFY_SITE_ID }} \
+            --auth ${{ secrets.NETLIFY_TOKEN }} \
+            --prod
