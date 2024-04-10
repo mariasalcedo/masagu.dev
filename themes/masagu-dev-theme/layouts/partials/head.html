@@ -6,5 +6,8 @@
     <link rel="canonical" href="{{ .Permalink }}">
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    {{ if .Site.Params.mastodon }}
+        {{ $mastodon := printf "<link rel=\"mastodon\" href=\"%s\">" .Site.Params.mastodon | safeHTML }}
+    {{ end }}
     <title>{{ $title }}</title>
 </head>
