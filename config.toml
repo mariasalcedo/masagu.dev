@@ -22,4 +22,8 @@ theme = "masagu-dev-theme"
     name = "About"
     url = "https://www.github.com/mariasalcedo"
     weight = 2
+  [[menu.main]]
+    name = "Q&A"
+    url = "https://github.com/mariasalcedo/masagu.dev/discussions"
+    weight = 3
 
