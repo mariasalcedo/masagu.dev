@@ -1,5 +1,11 @@
 {{ define "main" }}
 
+{{ if and .Content (eq .Paginator.PageNumber 1) }}
+<div class="margin-bt">
+    {{- partial "content.html" (dict "content" .Content) -}}
+</div>
+{{ end }}
+
 {{ partial "postcard/layout.html" (dict "pages" .RegularPages "ctx" .) }}
 
 {{ end }}
