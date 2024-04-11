@@ -3,13 +3,12 @@ languageCode = 'en-us'
 title = 'Masagu.dev'
 theme = "masagu-dev-theme"
 
-
 [params]
-    title = "Masagu.dev"
-    description = "masagu.dev is a WIP............."
-    message = "Masagu.dev is here"
-    background = ""
-    mastodon = "https://mastodon.green/@masagu"
+  title = "Masagu.dev"
+  description = "masagu.dev is a WIP............."
+  message = "Masagu.dev is here"
+  background = ""
+  mastodon = "https://mastodon.green/@masagu"
 
 [menu]
   [[menu.main]]

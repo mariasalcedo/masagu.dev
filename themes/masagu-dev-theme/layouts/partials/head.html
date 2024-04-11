@@ -4,10 +4,22 @@
     <link rel="stylesheet" type="text/css" href="/css/style_ex.css">
     <link rel="stylesheet" type="text/css" href="/css/otherstyle.css">
     <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- Mastodon Verify -->
+    {{ with .Site.Params.mastodon }}
+    <link rel="me" href="{{.}}">
+    {{ end }}
+
+    <!-- Title -->
     {{ $title := print .Site.Title " | " .Title }}
-    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
-    {{ if .Site.Params.mastodon }}
-        {{ $mastodon := printf "<link rel=\"mastodon\" href=\"%s\">" .Site.Params.mastodon | safeHTML }}
+    {{ if .IsHome }}
+        {{ $title = .Site.Title }}
     {{ end }}
     <title>{{ $title }}</title>
+
+    <!-- CSS -->
+    {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+
 </head>
