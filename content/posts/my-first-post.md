@@ -5,5 +5,7 @@ draft: false
 tags: ["foo", "bar"]
 ---
 
-Blabla first
+Blabla first summary
+<!--more-->
+Blabla rest of it
 
