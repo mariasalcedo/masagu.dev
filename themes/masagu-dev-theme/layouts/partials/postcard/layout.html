@@ -1,5 +1,7 @@
+{{ $pages := .pages }}
+
 <div class="postcard-layout margin-bt">
-    {{ range .Pages.ByPublishDate.Reverse }}
+    {{ range ($pages).ByDate.Reverse }}
     <a href="{{ .Permalink }}">
         <div class="postcard-item">
             <div class="postcard-title">
