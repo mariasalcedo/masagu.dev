@@ -65,6 +65,7 @@ $gray-1000: #000;
 $max-width: 860px;
 $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";
+$mobile-menu-breakpoint: 769px;
 
 html[class*="light"] {
   --color-text: #{$gray-900};
