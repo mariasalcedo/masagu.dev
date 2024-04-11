@@ -1,0 +1,26 @@
+<div class="postcard-layout margin-bt">
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <a href="{{ .Permalink }}">
+        <div class="postcard-item">
+            <div class="postcard-title">
+                <span>{{ .Title }}</span>
+            </div>
+            {{- with .Params.thumbnail }}
+            <div class="preview__footer partition">
+                <div class="preview__thumbnail">
+                    {{- partial "image" (dict "file" . "alt" $.Title "type" "thumbnail" "Page" $.Page ) }}
+                </div>
+            {{ else }}
+            <div class="preview__footer">
+            {{- end }}
+                <div class="postcard-summary">
+                    <span>{{ .Summary | plainify }}</span>
+                </div>
+            </div>
+            <div class="postcard-metadata">
+                <span>{{ partial "metadata" . }}</span>
+            </div>
+        </div>
+    </a>
+    {{ end }}
+</div>

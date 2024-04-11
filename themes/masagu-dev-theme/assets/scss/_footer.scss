@@ -1,7 +1,12 @@
 .footer {
   padding: 40px 20px;
   flex-grow: 0;
-  //color: $light-color-secondary;
+  font-family: 'Source Code Pro', monospace;
+  color: $light-footer-color;
+
+  [class*="dark"] & {
+    color: $dark-footer-color;
+  }
 
   &__inner {
     display: flex;
