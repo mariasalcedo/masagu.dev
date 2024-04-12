@@ -1,16 +1,16 @@
-/* Must be loaded before everything else */
-//@import "normalize";
-//@import "prism";
-//@import "flag-icons";
+$fontsPath: '{{ printf "../%s" (default "fonts/" .Site.Params.fontsDir) }}';
 
-/* Main stuff */
+/* Main properties */
+@import "base";
+@import "screen";
 @import "colors";
 @import "button";
 @import "mixins";
 @import "fonts";
-@import "posts";
 @import "text";
 
 /* Modules */
+@import "posts";
 @import "footer";
 @import "postcard";
+@import "preview";

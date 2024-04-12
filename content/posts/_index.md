@@ -6,4 +6,4 @@ tags: ["index"]
 type: "postcard"
 ---
 
-Some posts from Maria :)
+Posts by Maria

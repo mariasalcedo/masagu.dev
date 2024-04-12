@@ -1,16 +1,4 @@
-/* source-code-pro-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Source Code Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/source-code-pro-v23-latin-regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/source-code-pro-v23-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/source-code-pro-v23-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/source-code-pro-v23-latin-regular.woff') format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
-       url('../fonts/source-code-pro-v23-latin-regular.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
-       url('../fonts/source-code-pro-v23-latin-regular.svg#SourceCodePro') format('svg'); /* Legacy iOS */
-}
+
 
 :root {
     --color-primary: black;
@@ -130,9 +118,6 @@ a {
     box-sizing: border-box;
 }
 
-body {
-}
-
 .content {
     margin-left: 100px;
     margin-top: 100px;
@@ -140,7 +125,6 @@ body {
 
 h1 {
     margin-bottom: calc(var(--space) * 3);
-    font-family: var(--font-heading);
     font-size: calc(var(--font-size) + 6vmin);
     line-height: calc(var(--line-height) / 1.25);
     text-transform: uppercase;
@@ -212,7 +196,6 @@ h1 {
 }
 .main-navigation ul {
     font-size: 45px;
-    font-family: var(--font-heading);
     width: 100%;
 }
 .main-navigation li {
@@ -337,9 +320,7 @@ h1 {
 }
 
 
-body {
-    font-family: 'Source Code Pro', monospace;
-}
+
 
 .frame {
     border-color: black;
@@ -368,12 +349,6 @@ body {
     text-transform:uppercase;
 }
 
-body {
-       animation: fadein 3s;
-       -moz-animation: fadein 3s; /* Firefox */
-       -webkit-animation: fadein 3s; /* Safari and Chrome */
-       -o-animation: fadein 3s; /* Opera */
-   }
 @keyframes fadein {
     from {
         opacity:0;

@@ -1,12 +1,10 @@
-
-
-<header class="relative z-50 flex flex-col">
+<header class="relative z-50 flex flex-col fixed">
 	<div class="order-last mt-10 sm:mt-6"></div>
     <div class="top-0 z-10">
     <div class="h-24">
-	    <div class="mx-auto max-w-7xl lg:max-w-5xl lg:px-8 sm:px-8 px-4">
+	    <div class="mx-auto max-w-3xl lg:px-2 xl:px-0 sm:px-8 px-4">
                         <div class="relative flex justify-around object-cover h-14">
-                            <div class="flex flex-1 object-contain pt-3">
+                            <div class="flex flex-1 object-contain pt-3" style="padding-right: 6rem;">
 				    {{- partial "svg/masagu_logo.svg" . -}}
 			    </div>
 		     
@@ -72,7 +70,7 @@
                             </div>
 
 			    {{ end }}
-			    <!--   style="bottom: -20px; float:right; "  -->
+
                             <div class="flex justify-end md:flex-1 pt-6">
                                 <div class="pointer-events-auto">
                                     <button type="button" aria-label="Toggle dark mode" onclick="updateMode()"

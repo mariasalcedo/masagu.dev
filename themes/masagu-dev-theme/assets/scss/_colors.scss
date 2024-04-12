@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-/* Light theme color */
-$light-background: #fff;
+/* Light colors */
+$light-background: #fafafa;
 $light-background-secondary: #eaeaea;
 $light-background-header: #fafafa;
 $light-color: #222;
@@ -12,7 +12,7 @@ $light-table-color: #dcdcdc;
 $light-footer-color: #52525BFF;
 
 /* Dark theme colors */
-$dark-background: #232425;
+$dark-background: #000000;
 $dark-background-secondary: #3b3d42;
 $dark-background-header: #1b1c1d;
 $dark-color: #a9a9b3;
@@ -26,6 +26,9 @@ $dark-button-text: #93c5fd;
 
 /* Heart color */
 $tomato-color: #ec2d01;
+
+/* Mono Theme */
+$background-gray: #232425;
 
 /* Gray Palette */
 $gray-0: #fff;
@@ -58,25 +61,16 @@ $cerulean-450: #325ac6;
 $cerulean-500: #2a52be;
 
 .color {
-
   &__tomato {
     color: $tomato-color;
   }
-
   &__gray_600 {
     color: #52525B;
   }
-
   &__gray_400 {
     color: #A1A1AA;
   }
 }
-
-/* Content */
-$max-width: 860px;
-$media-size-phone: "(max-width: 684px)";
-$media-size-tablet: "(max-width: 900px)";
-$mobile-menu-breakpoint: 769px;
 
 html {
   --color-text: #{$gray-900};
@@ -84,7 +78,7 @@ html {
   --color-text-footer: #{$gray-500};
   --color-border: #{$gray-300};
   --color-border-collapsible-menu: #{$gray-200};
-  --color-background: #{$gray-0};
+  --color-background: #{$light-background};
   --color-background-hover: #{$gray-50};
   --color-background-overlay: #{$gray-150};
   --color-background-inline-code: #{$gray-100};
@@ -98,6 +92,7 @@ html {
   --color-button-text: #{$cerulean-pale};
   --color-button-hover: #{darken($cerulean-500, 20%)};
   --color-button-translucent: #{rgba($cerulean-500, 0.15)};
+  --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
 }
 
 html[class*="dark"] {
@@ -106,7 +101,7 @@ html[class*="dark"] {
   --color-text-footer: #{$gray-400};
   --color-border: #{$gray-500};
   --color-border-collapsible-menu: #{$gray-550};
-  --color-background: #{$gray-750};
+  --color-background: #{$dark-background};
   --color-background-hover: #{$gray-600};
   --color-background-overlay: #{$gray-700};
   --color-background-inline-code: #{$gray-600};

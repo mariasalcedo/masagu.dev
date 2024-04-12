@@ -1,0 +1,32 @@
+<li class="post__item">
+    <div class="preview">
+        <div class="preview__header">
+            <h3 class="post__link">
+                <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title | markdownify  }}</a>
+            </h3>
+            {{ partial "post-meta" . }}
+        </div>
+        {{- with .Params.thumbnail }}
+        <div class="preview__footer partition">
+            <div class="preview__thumbnail">
+                {{- partial "image" (dict "file" . "alt" $.Title "type" "thumbnail" "Page" $.Page ) }}
+            </div>
+            {{ else }}
+            <div class="preview__footer">
+                {{- end }}
+                <div class="">
+                    {{- $summary := truncate 320 .Summary }}
+                    {{- if .Params.summary }}
+                    {{- $summary = .Params.summary }}
+                    {{- else if .Params.abstract }}
+                    {{ $summary = .Params.abstract }}
+                    {{- end }}
+                    {{ if not ( strings.Contains $summary "<p>" ) }}
+                    <p>{{ $summary | markdownify }}</p>
+                    {{ else }}
+                    {{ $summary | markdownify }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+</li>

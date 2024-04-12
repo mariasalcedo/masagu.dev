@@ -1,4 +1,9 @@
 .post {
+  &__main_title {
+    @include text-2xl;
+    @include font-bold;
+  }
+
   &__link, &__title {
     margin-bottom: 0;
   }
@@ -21,11 +26,11 @@
     background-size: cover;
     background-position: center;
     margin-top: 4.2rem;
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: $lg_width) {
       height: 40vh;
       margin-top: 3rem
     }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: $md_width) {
       height: 30vh;
     }
     & + .content {
@@ -71,17 +76,17 @@
     span {
       align-items: center;
       margin-bottom: 0.5rem;
-      @media screen and (min-width: 557px) {
+      @media screen and (min-width: $sm_width) {
         gap: 0.5rem 0;
       }
       &:last-of-type {
-        @media screen and (max-width: 667px) {
+        @media screen and (max-width: $md_width) {
           margin-top: - 0.5 rem;
         }
       }
     }
     .button {
-      @media screen and (min-width: 667px) {
+      @media screen and (min-width: $md_width) {
         margin: 0 0.5rem;
       }
     }
@@ -104,32 +109,6 @@
     }
     ol {
       list-style: decimal;
-    }
-  }
-}
-
-.preview {
-  &__header, &__footer {
-    padding: 1rem
-  }
-  &__footer {
-    padding: 0 1rem 2.25rem 1rem;
-  }
-  &__thumbnail {
-    min-height: 10rem;
-    display: none;
-    @media screen and (min-width: $mobile-menu-breakpoint) {
-      display: block;
-      border-radius: 0.5rem;
-    }
-  }
-  &__footer {
-    &.partition {
-      display: grid;
-      @media screen and (min-width: $mobile-menu-breakpoint) {
-        grid-template-columns: 2fr 7fr;
-        grid-gap: 1rem;
-      }
     }
   }
 }
