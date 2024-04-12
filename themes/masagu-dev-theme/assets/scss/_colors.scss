@@ -21,6 +21,8 @@ $dark-color-secondary: #b3b3bd;
 $dark-border-color: #4e4e57;
 $dark-table-color: #4e4e57;
 $dark-footer-color: #A1A1AAFF;
+$dark-button-color: #2563eb;
+$dark-button-text: #93c5fd;
 
 /* Heart color */
 $tomato-color: #ec2d01;
@@ -93,7 +95,7 @@ html {
   --color-navbar-item-active: #{$gray-900};
   --color-navbar-item-in-section: #{$gray-600};
   --color-button: #{$cerulean-500};
-  --color-button-text: #{$cerulean-pale}
+  --color-button-text: #{$cerulean-pale};
 }
 
 html[class*="dark"] {
@@ -112,6 +114,6 @@ html[class*="dark"] {
   --color-navbar-item-inactive: #{$gray-400};
   --color-navbar-item-active: #{$gray-100};
   --color-navbar-item-in-section: #{$gray-250};
-  --color-button: #2563eb;
-  --color-button-text: #93c5fd;
+  --color-button: #{$dark-button-color};
+  --color-button-text: #{$dark-button-text};
 }
