@@ -27,15 +27,31 @@
     .postcard-title {
       @include text-xl;
       @include font-medium;
+      color: var(--color-text);
+      white-space: normal;
+      @media screen and (min-width: $md_width) {
+        //margin: .5rem 1rem;
+        @include text-xl;
+      }
+      @media screen and (min-width: $xl_width) {
+        //margin: .5rem 1rem;
+        @include text-2xl;
+      }
     }
 
     .postcard-summary {
       @include text-xs;
       color: var(--color-text-secondary);
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      margin: .5rem 0;
+      white-space: pre-line;
+      margin: 0 0;
+      @media screen and (min-width: $md_width) {
+        @include text-xs;
+        margin: 0 2rem;
+      }
+      @media screen and (min-width: $xl_width) {
+        margin: .5rem 2rem;
+        @include text-sm;
+      }
     }
 
     .postcard-metadata {

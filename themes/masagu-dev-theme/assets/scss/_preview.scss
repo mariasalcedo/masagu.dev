@@ -1,0 +1,30 @@
+.preview {
+  &__header, &__footer {
+    padding: 1rem
+  }
+
+  &__thumbnail {
+    min-height: 10rem;
+    background: no-repeat center;
+    background-size: contain;
+    border-radius: 5px;
+
+    @media screen and (min-width: $md_width) {
+      background: no-repeat right;
+      background-size: contain;
+      width: 80%;
+      height: 200px;
+      margin-left: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  &__footer {
+    &.partition {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: $md_width) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

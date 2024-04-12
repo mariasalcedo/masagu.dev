@@ -7,7 +7,11 @@ thumbnail: "images/masagu.jpeg"
 type: "postcard"
 ---
 
-Blabla first summary
+Blabla first summary, Blabla first summary, Blabla first summary, Blabla first summary.
+
+Because bla bla, therefore bla bla.
+
+Then wrap. Read for more.
 <!--more-->
 Blabla rest of it
 

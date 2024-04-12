@@ -1,0 +1,28 @@
+body {
+  font-family: var(--font), 'Source Code Pro', monospace;
+  display: flex;
+  justify-content: center;
+  background: var(--color-background);
+  line-height: 1.5;
+/*  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  flex-direction: column;*/
+  min-height: 100vh;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  height: 100%;
+}
