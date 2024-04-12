@@ -96,6 +96,8 @@ html {
   --color-navbar-item-in-section: #{$gray-600};
   --color-button: #{$cerulean-500};
   --color-button-text: #{$cerulean-pale};
+  --color-button-hover: #{darken($cerulean-500, 20%)};
+  --color-button-translucent: #{rgba($cerulean-500, 0.15)};
 }
 
 html[class*="dark"] {
@@ -116,4 +118,6 @@ html[class*="dark"] {
   --color-navbar-item-in-section: #{$gray-250};
   --color-button: #{$dark-button-color};
   --color-button-text: #{$dark-button-text};
+  --color-button-hover: #{darken($dark-button-color, 20%)};
+  --color-button-translucent: #{rgba($dark-button-color, 0.15)};
 }
