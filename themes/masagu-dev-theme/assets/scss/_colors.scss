@@ -9,7 +9,6 @@ $light-color-variant: black;
 $light-color-secondary: #999;
 $light-border-color: #dcdcdc;
 $light-table-color: #dcdcdc;
-
 $light-footer-color: #52525BFF;
 
 /* Dark theme colors */
@@ -21,10 +20,14 @@ $dark-color-variant: white;
 $dark-color-secondary: #b3b3bd;
 $dark-border-color: #4e4e57;
 $dark-table-color: #4e4e57;
-
 $dark-footer-color: #A1A1AAFF;
+$dark-button-color: #2563eb;
+$dark-button-text: #93c5fd;
 
+/* Heart color */
 $tomato-color: #ec2d01;
+
+/* Gray Palette */
 $gray-0: #fff;
 $gray-50: #f7f7f7;
 $gray-100: #f5f5f5;
@@ -46,16 +49,13 @@ $gray-850: #1f1f1f;
 $gray-900: #171717;
 $gray-1000: #000;
 
-
+/* Cerulean Palette */
 $cerulean-pale: #8394d2;
 $cerulean-300: #4a72e8;
 $cerulean-350: #426ae0;
 $cerulean-400: #3a62ce;
 $cerulean-450: #325ac6;
 $cerulean-500: #2a52be;
-
-
-
 
 .color {
 
@@ -64,11 +64,11 @@ $cerulean-500: #2a52be;
   }
 
   &__gray_600 {
-    color: #52525BFF;
+    color: #52525B;
   }
 
   &__gray_400 {
-    color: #A1A1AAFF;
+    color: #A1A1AA;
   }
 }
 
@@ -78,7 +78,7 @@ $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";
 $mobile-menu-breakpoint: 769px;
 
-html[class*="light"] {
+html {
   --color-text: #{$gray-900};
   --color-text-secondary: #{$gray-500};
   --color-text-footer: #{$gray-500};
@@ -95,7 +95,9 @@ html[class*="light"] {
   --color-navbar-item-active: #{$gray-900};
   --color-navbar-item-in-section: #{$gray-600};
   --color-button: #{$cerulean-500};
-  --color-button-text: #{$cerulean-pale}
+  --color-button-text: #{$cerulean-pale};
+  --color-button-hover: #{darken($cerulean-500, 20%)};
+  --color-button-translucent: #{rgba($cerulean-500, 0.15)};
 }
 
 html[class*="dark"] {
@@ -114,6 +116,8 @@ html[class*="dark"] {
   --color-navbar-item-inactive: #{$gray-400};
   --color-navbar-item-active: #{$gray-100};
   --color-navbar-item-in-section: #{$gray-250};
-  --color-button: #2563eb;
-  --color-button-text: #93c5fd;
+  --color-button: #{$dark-button-color};
+  --color-button-text: #{$dark-button-text};
+  --color-button-hover: #{darken($dark-button-color, 20%)};
+  --color-button-translucent: #{rgba($dark-button-color, 0.15)};
 }
