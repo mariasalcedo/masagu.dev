@@ -2609,6 +2609,11 @@ img, video {
     .xl\:pl-24 {
         padding-left: 6rem
     }
+
+    .xl\:px-8 {
+        padding-left: 2rem;
+        padding-right: 2rem
+    }
 }
 
 .\[\&_\*\]\:\!transition-none * {

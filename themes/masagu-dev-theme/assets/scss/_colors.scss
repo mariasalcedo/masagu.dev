@@ -46,6 +46,17 @@ $gray-850: #1f1f1f;
 $gray-900: #171717;
 $gray-1000: #000;
 
+
+$cerulean-pale: #8394d2;
+$cerulean-300: #4a72e8;
+$cerulean-350: #426ae0;
+$cerulean-400: #3a62ce;
+$cerulean-450: #325ac6;
+$cerulean-500: #2a52be;
+
+
+
+
 .color {
 
   &__tomato {
@@ -83,6 +94,8 @@ html[class*="light"] {
   --color-navbar-item-inactive: #{$gray-400};
   --color-navbar-item-active: #{$gray-900};
   --color-navbar-item-in-section: #{$gray-600};
+  --color-button: #{$cerulean-500};
+  --color-button-text: #{$cerulean-pale}
 }
 
 html[class*="dark"] {
@@ -101,4 +114,6 @@ html[class*="dark"] {
   --color-navbar-item-inactive: #{$gray-400};
   --color-navbar-item-active: #{$gray-100};
   --color-navbar-item-in-section: #{$gray-250};
+  --color-button: #2563eb;
+  --color-button-text: #93c5fd;
 }
