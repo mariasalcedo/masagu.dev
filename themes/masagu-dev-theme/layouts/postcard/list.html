@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-<div class="px-4 xl:px-8 sm:px-8">
+<div class="px-4 lg:px-8 sm:px-8">
     {{ if and .Content (eq .Paginator.PageNumber 1) }}
-    <div class="margin-bt">
+    <div class="postcard-header margin-bt">
         {{- partial "content.html" (dict "content" .Content) -}}
     </div>
     {{ end }}

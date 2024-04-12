@@ -3,6 +3,11 @@
   margin-bottom: 2rem;
 }
 
+.postcard-header {
+  font-family: $font-source-code-pro;
+  color: var(--color-text);
+}
+
 .postcard-layout {
   a {
     color: var(--color-text);
