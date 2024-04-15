@@ -27,6 +27,7 @@
     .postcard-title {
       @include text-xl;
       @include font-medium;
+      font-family: $font-source-code-pro;
       color: var(--color-text);
       white-space: normal;
       @media screen and (min-width: $md_width) {

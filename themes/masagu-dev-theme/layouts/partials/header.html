@@ -1,101 +1,89 @@
-<header class="relative z-50 flex flex-col fixed">
-	<div class="order-last mt-10 sm:mt-6"></div>
-    <div class="top-0 z-10">
-    <div class="h-24">
-	    <div class="mx-auto max-w-3xl lg:px-2 xl:px-0 sm:px-8 px-4">
-                        <div class="relative flex justify-around object-cover h-14">
-                            <div class="flex flex-1 object-contain pt-3" style="padding-right: 6rem;">
-				    {{- partial "svg/masagu_logo.svg" . -}}
-			    </div>
-		     
-			    {{ if isset .Site.Menus "main" }}
-                            
-			<div class="flex flex-1 justify-end md:justify-center sm:justify-center pt-6 px-2">
-                                <div class="pointer-events-auto md:hidden">
-                                    <button class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 
+<header>
+    <div class="header-wrapper">
+        <div class="header-wrapper__logo">
+            {{- partial "svg/masagu_logo.svg" . -}}
+        </div>
+
+        {{ if isset .Site.Menus "main" }}
+
+        <div class="flex flex-1 justify-end md:justify-center sm:justify-center pt-6 px-2">
+            <div class="pointer-events-auto md:hidden">
+                <button class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5
 					    backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
-                                            type="button" aria-expanded="false" onclick="dropdownMenu()">Menu
-                                        <svg viewBox="0 0 8 6" aria-hidden="true"
-                                             class="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400">
-                                            <path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" stroke-width="1.5"
-                                                  stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </button>
+                        type="button" aria-expanded="false" onclick="dropdownMenu()">Menu
+                    <svg viewBox="0 0 8 6" aria-hidden="true"
+                         class="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400">
+                        <path d="M1.75 1.75 4 4.25l2.25-2.5" fill="none" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
 
 
-
-				    <div id="menuDropdown" class="hidden">
-					    <div class="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80 opacity-100"  aria-hidden="true"></div>
-					    <div class="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800 opacity-100 scale-100" tabindex="-1">
-						    <div class="flex flex-row-reverse items-center justify-between">
-							    <button aria-label="Close menu" class="-m-1 p-1" type="button" tabindex="0" onclick="dropdownMenu()">
-								    <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 text-zinc-500 dark:text-zinc-400">
-								    <path d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-							    </svg>
-							    </button>
-							    <h2 class="text-sm font-medium color__gray_600 dark:text-zinc-400">Masagu's Menu</h2>
-						    </div>
-						    <nav class="mt-6">
-							    <ul class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-								    {{ range .Site.Menus.main }}
-								    <li>
-									    <a class="block py-2" href="{{ .URL }}">{{ $text := print .Name | safeHTML }} {{ $text }}</a>
-								    </li>
-								    {{ end }}
-							    </ul>
-						    </nav>
-					    </div>
-				    </div>
-
-
-
-
-
-
-
-
-
-
-
-                                </div>
-                                <nav class="pointer-events-auto hidden md:block">
-                                    <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10"> 
-					     {{ range .Site.Menus.main }}
-                                        <li>
-                                            <a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
-                                               href="{{ .URL }}">{{ $text := print .Name | safeHTML }} {{ $text }}</a></li>
-					{{ end }}
-                                    </ul>
-                                </nav>
-                            </div>
-
-			    {{ end }}
-
-                            <div class="flex justify-end md:flex-1 pt-6">
-                                <div class="pointer-events-auto">
-                                    <button type="button" aria-label="Toggle dark mode" onclick="updateMode()"
-                                            class="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
-                                        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
-                                             stroke-linejoin="round" aria-hidden="true"
-                                             class="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden">
-                                            <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z"></path>
-                                            <path d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
-                                                  fill="none"></path>
-                                        </svg>
-                                        <svg viewBox="0 0 24 24" aria-hidden="true"
-                                             class="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block">
-                                            <path d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z"
-                                                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+                <div id="menuDropdown" class="hidden">
+                    <div class="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm dark:bg-black/80 opacity-100"
+                         aria-hidden="true"></div>
+                    <div class="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white p-8 ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800 opacity-100 scale-100"
+                         tabindex="-1">
+                        <div class="flex flex-row-reverse items-center justify-between">
+                            <button aria-label="Close menu" class="-m-1 p-1" type="button" tabindex="0"
+                                    onclick="dropdownMenu()">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"
+                                     class="h-6 w-6 text-zinc-500 dark:text-zinc-400">
+                                    <path d="m17.25 6.75-10.5 10.5M6.75 6.75l10.5 10.5" fill="none"
+                                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                          stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                            <h2 class="text-sm font-medium color__gray_600 dark:text-zinc-400">Masagu's Menu</h2>
                         </div>
+                        <nav class="mt-6">
+                            <ul class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+                                {{ range .Site.Menus.main }}
+                                <li>
+                                    <a class="block py-2" href="{{ .URL }}">{{ $text := print .Name | safeHTML }} {{
+                                        $text }}</a>
+                                </li>
+                                {{ end }}
+                            </ul>
+                        </nav>
                     </div>
-    </div>
+                </div>
 
-    </div>
 
+            </div>
+            <nav class="pointer-events-auto hidden md:block">
+                <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+                    {{ range .Site.Menus.main }}
+                    <li>
+                        <a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                           href="{{ .URL }}">{{ $text := print .Name | safeHTML }} {{ $text }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+
+        {{ end }}
+
+        <div class="flex justify-end md:flex-1 pt-6">
+            <div class="pointer-events-auto">
+                <button type="button" aria-label="Toggle dark mode" onclick="updateMode()"
+                        class="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"
+                         stroke-linejoin="round" aria-hidden="true"
+                         class="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden">
+                        <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z"></path>
+                        <path d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
+                              fill="none"></path>
+                    </svg>
+                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                         class="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block">
+                        <path d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z"
+                              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
 </header> 
 
 

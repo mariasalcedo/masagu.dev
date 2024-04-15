@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
+/* General */
+$title-shadow: 6px 6px 4px rgba(59, 130, 246, .5);
+
 /* Light colors */
-$light-background: #fafafa;
-$light-background-secondary: #eaeaea;
+$light-background: #eaeaea;
+$light-background-color: #6893A6;
+$light-background-secondary: #fafafa;
 $light-background-header: #fafafa;
 $light-color: #222;
 $light-color-variant: black;
@@ -10,10 +14,12 @@ $light-color-secondary: #999;
 $light-border-color: #dcdcdc;
 $light-table-color: #dcdcdc;
 $light-footer-color: #52525BFF;
+$light-shadow-color: #3B82F67F;
+$light-body-shadow: 0px 10px 10px 10px $light-shadow-color;
 
 /* Dark theme colors */
 $dark-background: #000000;
-$dark-background-secondary: #3b3d42;
+$dark-background-secondary: #18181BFF;
 $dark-background-header: #1b1c1d;
 $dark-color: #a9a9b3;
 $dark-color-variant: white;
@@ -23,6 +29,8 @@ $dark-table-color: #4e4e57;
 $dark-footer-color: #A1A1AAFF;
 $dark-button-color: #2563eb;
 $dark-button-text: #93c5fd;
+$dark-shadow-color: #3B82F633;
+$dark-body-shadow: 0px 10px 10px 10px $dark-shadow-color;
 
 /* Heart color */
 $tomato-color: #ec2d01;
@@ -78,9 +86,9 @@ html {
   --color-text-footer: #{$gray-500};
   --color-border: #{$gray-300};
   --color-border-collapsible-menu: #{$gray-200};
-  --color-background: #{$light-background};
+  --color-background: #{$light-background-color};
   --color-background-hover: #{$gray-50};
-  --color-background-overlay: #{$gray-150};
+  --color-background-overlay: #{$light-background-secondary};
   --color-background-inline-code: #{$gray-100};
   --color-background-card: #{$gray-0};
   --color-background-mark: #fff1a7;
@@ -92,7 +100,9 @@ html {
   --color-button-text: #{$cerulean-pale};
   --color-button-hover: #{darken($cerulean-500, 20%)};
   --color-button-translucent: #{rgba($cerulean-500, 0.15)};
-  --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji
+  --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --shadow-body: #{$light-body-shadow};
+  --shadow-svg-title: #{drop-shadow($title-shadow)};
 }
 
 html[class*="dark"] {
@@ -103,7 +113,7 @@ html[class*="dark"] {
   --color-border-collapsible-menu: #{$gray-550};
   --color-background: #{$dark-background};
   --color-background-hover: #{$gray-600};
-  --color-background-overlay: #{$gray-700};
+  --color-background-overlay: #{$dark-background-secondary};
   --color-background-inline-code: #{$gray-600};
   --color-background-card: #{$gray-700};
   --color-background-mark: #fff1a7;
@@ -115,4 +125,10 @@ html[class*="dark"] {
   --color-button-text: #{$dark-button-text};
   --color-button-hover: #{darken($dark-button-color, 20%)};
   --color-button-translucent: #{rgba($dark-button-color, 0.15)};
+  --shadow-body: #{$dark-body-shadow};
+  --shadow-svg-title: #{drop-shadow($title-shadow)};
+}
+
+@mixin dimmed {
+  opacity: .6;
 }

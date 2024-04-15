@@ -1,13 +1,23 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  height: 100%;
+}
+
 body {
   font-family: var(--font), 'Source Code Pro', monospace;
   display: flex;
   justify-content: center;
   background: var(--color-background);
   line-height: 1.5;
-/*  max-width: 1920px;
   margin: 0 auto;
-  position: relative;
-  flex-direction: column;*/
+  max-width: 1920px;
+  /*
+    position: relative;
+    flex-direction: column;*/
   min-height: 100vh;
   font-kerning: normal;
   -webkit-font-smoothing: antialiased;
@@ -18,11 +28,20 @@ body {
   -o-animation: fadein 3s; /* Opera */
 }
 
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  tab-size: 4;
-  font-feature-settings: normal;
-  font-variation-settings: normal;
-  height: 100%;
+header {
+  // width: 80%?
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  background: transparent;
+  -webkit-backdrop-filter: blur(5px);
+  padding: 15px calc(15vw - 30px);
+  //30px for laptop L; laptop
+  //align-items: center;
+  //justify-content: center;
+}
+
+main {
+  padding: 150px 15vw;
 }

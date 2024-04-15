@@ -1,7 +1,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="100%" viewBox="0 0 1024 288" enable-background="new 0 0 1024 288" xml:space="preserve"
-class="fill-black stroke-black dark:fill-zinc-400 dark:stroke-zinc-500 transition">
-<path  opacity="1.000000"  
+class="svg__shadow fill-black stroke-black dark:fill-zinc-400 dark:stroke-zinc-500 transition">
+<path opacity="1.000000"
 	d="
 M159.428406,121.376785 
 	C152.900543,131.478256 144.266113,139.921814 141.482056,151.849167 
