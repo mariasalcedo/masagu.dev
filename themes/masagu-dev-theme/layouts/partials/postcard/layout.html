@@ -4,21 +4,22 @@
     {{ range ($pages).ByDate.Reverse }}
     <a href="{{ .Permalink }}">
         <div class="postcard-item">
-<!--            <div class="postcard-title">-->
-<!--                <span>{{ .Title }}</span>-->
-<!--            </div>-->
             {{- with .Params.thumbnail }}
             <div class="preview__footer partition">
                     <figure class="preview__thumbnail"
                          style="background-image: url('{{ . | absURL}}')"
                     ></figure>
-                </figure>
             {{ else }}
             <div class="preview__footer">
             {{- end }}
-                <div>
+                <div class="flex flex-col" style = "overflow: hidden;">
                 <div class="postcard-title">
-                    <span>{{ .Title }}</span>
+                    {{ .Title }} <span class="postcard-title__end">_</span>
+                    {{- with .Params.subtitle }}
+                    <div class="postcard-subtitle">
+                        <span>{{ . }}</span>
+                    </div>
+                    {{- end }}
                 </div>
                 <div class="postcard-summary">
                     <p>{{ .Summary | plainify }}</p>

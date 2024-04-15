@@ -1,6 +1,20 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ partial "metadata.html" . }}
-<br><br>
-{{ .Content }}
+<div class="postcard-layout">
+    <div class="postcard-item">
+        <div class="postcard-title">
+            <h1>{{ .Title }} <span class="postcard-title__end">_</span> </h1>
+            {{- with .Params.subtitle }}
+            <div class="postcard-subtitle" style="color:var(--color-text); ">
+                <span>{{ . }}</span>
+            </div>
+            {{- end }}
+        </div>
+        <div class="postcard-metadata" style="margin-top: 0.75rem;">
+            <span>{{ partial "metadata" . }}</span>
+        </div>
+        <div class="postcard-summary" style="color:var(--color-text); font-size: 1rem; /* 16px */">
+            <p>{{ .Content }}</p>
+        </div>
+    </div>
+</div>
 {{ end }}

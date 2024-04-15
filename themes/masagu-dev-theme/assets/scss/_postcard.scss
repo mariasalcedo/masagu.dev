@@ -25,19 +25,35 @@
     }
 
     .postcard-title {
-      @include text-xl;
+      @include text-base;
       @include font-medium;
       font-family: $font-source-code-pro;
       color: var(--color-text);
-      white-space: normal;
-      @media screen and (min-width: $md_width) {
-        //margin: .5rem 1rem;
-        @include text-xl;
-      }
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-bottom: 1px solid #3a62ce;
+      padding-bottom: 0.5rem;
       @media screen and (min-width: $xl_width) {
         //margin: .5rem 1rem;
-        @include text-2xl;
+        @include text-lg;
+        white-space: normal;
       }
+      &__end {
+        color: #{$tomato-color};
+        @include text-2xl;
+        @include font-extrabold;
+      }
+    }
+
+    .postcard-subtitle {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @include text-xxs;
+      @include font-light;
+      font-family: $font-source-code-pro;
+      color: var(--color-text-secondary);
     }
 
     .postcard-summary {
