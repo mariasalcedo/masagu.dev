@@ -3,33 +3,35 @@
 <div class="postcard-layout">
     {{ range ($pages).ByDate.Reverse }}
     <a href="{{ .Permalink }}">
-        <div class="postcard-item">
-            {{- with .Params.thumbnail }}
-            <div class="preview__footer partition">
+        <article>
+            <div class="postcard-item">
+                {{- with .Params.thumbnail }}
+                <div class="preview__footer partition">
                     <figure class="preview__thumbnail"
-                         style="background-image: url('{{ . | absURL}}')"
+                            style="background-image: url('{{ . | absURL}}')"
                     ></figure>
-            {{ else }}
-            <div class="preview__footer">
-            {{- end }}
-                <div class="flex flex-col" style = "overflow: hidden;">
-                <div class="postcard-title">
-                    {{ .Title }} <span class="postcard-title__end">_</span>
-                    {{- with .Params.subtitle }}
-                    <div class="postcard-subtitle">
-                        <span>{{ . }}</span>
+                    {{ else }}
+                    <div class="preview__footer">
+                        {{- end }}
+                        <div class="flex flex-col" style="overflow: hidden;">
+                            <div class="postcard-title">
+                                {{ .Title }} <span class="postcard-title__end">_</span>
+                                {{- with .Params.subtitle }}
+                                <div class="postcard-subtitle">
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{- end }}
+                            </div>
+                            <div class="postcard-summary">
+                                <p>{{ .Summary | plainify }}</p>
+                            </div>
+                        </div>
                     </div>
-                    {{- end }}
+                    <div class="postcard-metadata">
+                        <span>{{ partial "metadata" . }}</span>
+                    </div>
                 </div>
-                <div class="postcard-summary">
-                    <p>{{ .Summary | plainify }}</p>
-                </div>
-                </div>
-            </div>
-            <div class="postcard-metadata">
-                <span>{{ partial "metadata" . }}</span>
-            </div>
-        </div>
+        </article>
     </a>
     {{ end }}
 </div>
