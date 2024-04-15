@@ -1,9 +1,10 @@
 ---
-title: "My First Post"
+title: "My First super long title but what happens with the image?"
 date: 2024-03-26T13:35:52Z
 draft: false
 tags: ["foo", "bar"]
 thumbnail: "images/masagu.svg"
+subtitle: "Because it is never too late to do a long subtitle..."
 ---
 
 Blabla first summary, Blabla first summary, Blabla first summary, Blabla first summary.

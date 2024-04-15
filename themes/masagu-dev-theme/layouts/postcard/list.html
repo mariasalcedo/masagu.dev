@@ -1,9 +1,9 @@
 {{ define "main" }}
 
 {{ if and .Content (eq .Paginator.PageNumber 1) }}
-<div class="postcard-header">
+<section class="postcard-header">
     {{- partial "content.html" (dict "content" .Content) -}}
-</div>
+</section>
 {{ end }}
 
 {{ partial "postcard/layout.html" (dict "pages" .RegularPages "ctx" .) }}

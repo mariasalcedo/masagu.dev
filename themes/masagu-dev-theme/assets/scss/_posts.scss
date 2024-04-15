@@ -69,8 +69,10 @@
 
   &__meta {
     align-items: stretch;
+
     &, span {
-      display: inline-flex;
+      display: flex;
+      justify-content: space-between;
       flex-flow: row wrap;
     }
     span {
