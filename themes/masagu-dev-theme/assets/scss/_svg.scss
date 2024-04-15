@@ -1,0 +1,6 @@
+.svg {
+  &__shadow {
+    -webkit-filter: var(--shadow-svg-title);
+    filter: var(--shadow-svg-title);
+  }
+}

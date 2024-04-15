@@ -1,16 +1,20 @@
 $fontsPath: '{{ printf "../%s" (default "fonts/" .Site.Params.fontsDir) }}';
 
-/* Main properties */
-@import "base";
+/* vars */
 @import "screen";
 @import "colors";
-@import "button";
-@import "mixins";
-@import "fonts";
 @import "text";
+@import "fonts";
+@import "svg";
+
+/* Main properties */
+@import "button";
+@import "base";
+@import "body-wrapper";
+@import "header";
+@import "footer";
 
 /* Modules */
 @import "posts";
-@import "footer";
 @import "postcard";
 @import "preview";
