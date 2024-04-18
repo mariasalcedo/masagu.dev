@@ -16,6 +16,7 @@ $light-table-color: #dcdcdc;
 $light-footer-color: #52525BFF;
 $light-shadow-color: #3B82F67F;
 $light-body-shadow: 0px 10px 10px 10px $light-shadow-color;
+$light-svg-title: #3f5787;
 
 /* Dark theme colors */
 $dark-background: #000000;
@@ -31,6 +32,7 @@ $dark-button-color: #2563eb;
 $dark-button-text: #93c5fd;
 $dark-shadow-color: #3B82F633;
 $dark-body-shadow: 0px 10px 10px 10px $dark-shadow-color;
+$dark-svg-title: #ffffff;
 
 /* Heart color */
 $tomato-color: #ec2d01;
@@ -103,6 +105,7 @@ html {
   --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --shadow-body: #{$light-body-shadow};
   --shadow-svg-title: #{drop-shadow($title-shadow)};
+  --svg-stroke: #{$light-svg-title};
 }
 
 html[class*="dark"] {
@@ -127,6 +130,7 @@ html[class*="dark"] {
   --color-button-translucent: #{rgba($dark-button-color, 0.15)};
   --shadow-body: #{$dark-body-shadow};
   --shadow-svg-title: #{drop-shadow($title-shadow)};
+  --svg-stroke: #{$dark-svg-title};
 }
 
 @mixin dimmed {
