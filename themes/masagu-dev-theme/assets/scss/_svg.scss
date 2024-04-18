@@ -4,3 +4,34 @@
     filter: var(--shadow-svg-title);
   }
 }
+
+@keyframes grow {
+  0%{
+    opacity:0
+  }
+  10%{
+    opacity:1
+  }
+  30%{
+    stroke-dasharray:1200px 0
+  }
+}
+
+@media (prefers-reduced-motion){
+  .path1{
+    animation:none!important;
+    stroke-dasharray:unset!important
+  }
+}
+
+.path1 {
+  stroke-dashoffset:1px;
+  stroke-dasharray:0 1200px;
+  animation:grow 10s ease-in-out forwards infinite;
+  transform-origin:center;
+  stroke: var(--svg-stroke);
+  fill: none;
+  animation-delay:0s;
+  stroke-linecap: round;
+  stroke-width: 15px;
+}
