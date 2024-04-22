@@ -1,0 +1,5 @@
+<div style="padding-top: 10px;">
+    {{ range .Site.Taxonomies.tags }}
+    <a href="{{ .Page.Permalink }}" class="post__tag button button_translucent">{{ .Page.Title }}  {{ .Count }} </a></li>
+    {{ end }}
+</div>

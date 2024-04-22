@@ -1,0 +1,14 @@
+{{ $content := .content }}
+{{ $index := .index }}
+<article class="post__main_title">
+    <span class="color__tomato">></span>
+    {{- with $index }}
+    {{- $indexurl := urlize . -}}
+    <a href='{{ absLangURL (printf "%s/" $indexurl) }}' title="{{ . }}">
+        {{ . }}
+    </a>
+    <span  style="color:#3B82F67F">/</span>
+    {{- end }}
+    {{ $content | plainify }}
+    <span class="color__tomato">~</span> <span style="color:#3B82F67F">%</span>
+</article>

@@ -22,8 +22,11 @@
                                 </div>
                                 {{- end }}
                             </div>
-                            <div class="postcard-summary">
-                                <p>{{ .Summary | plainify }}</p>
+                            <blockquote class="postcard-summary">
+                                <p>{{ .Summary }}</p>
+                            </blockquote>
+                            <div style="justify-content: right">
+                                <span class="post__tag button button_red">Continue reading >>></span>
                             </div>
                         </div>
                     </div>
