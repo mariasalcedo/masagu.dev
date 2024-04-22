@@ -1,18 +1,4 @@
 <div class="post__meta">
-    <span class="post__date">
-        {{ partial "sprite" (dict "icon" "calendar") }}  ·
-      {{ .Date.Format "2006/01/02" }} · {{ .ReadingTime }} min read ·
-    </span>
-    {{- with .Params.tags -}}
-    <div>
-    <span>
-      {{- range . }}
-        {{- $tag := urlize . -}}
-        <a href='{{ absLangURL (printf "tags/%s/" $tag) }}' title="{{ . }}" class="post__tag button button_translucent">
-          {{- . }}
-        </a>
-      {{- end }}
-    </span>
-    </div>
-    {{- end }}
+    {{ partial "date" . }}
+    {{ partial "tags" . }}
 </div>

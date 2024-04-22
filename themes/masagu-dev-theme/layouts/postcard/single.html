@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="postcard-header">
+    {{- partial "postcard/content.html" (dict "content" .Title "index" "Blog") -}}
+</section>
+<section class="postcard-layout">
+    <div class="postcard-item">
+        <div class="postcard-title" style="font-size: 0.75rem;">
+            {{- with .Params.subtitle }}
+            <span>{{ . }}</span><span class="postcard-title__end"> _</span>
+            {{- end }}
+            <div class="postcard-metadata" style="margin-top: 0.45rem;">
+                <span>{{ partial "date" . }}</span>
+            </div>
+        </div>
+        <div class="postcard-summary" style="color:var(--color-text);">
+            <p>{{ .Content }}</p>
+        </div>
+        <div class="postcard-title">
+        </div>
+        <div class="postcard-metadata post__meta" style="margin-top: 1rem;">
+            <span>{{ partial "tags" . }}</span>
+            <a href="/blog"><span class="post__tag button button_red">Back to Blog</span></a>
+        </div>
+    </div>
+</section>
+
+{{ partial "comments.html" . }}
+{{ end }}

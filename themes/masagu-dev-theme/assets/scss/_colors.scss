@@ -35,7 +35,10 @@ $dark-body-shadow: 0px 10px 10px 10px $dark-shadow-color;
 $dark-svg-title: #ffffff;
 
 /* Heart color */
+$dark-text-tomato-color: #280902;
+$dark-tomato-color: #801902;
 $tomato-color: #ec2d01;
+$tomato-color-pale: #efad9e;
 
 /* Mono Theme */
 $background-gray: #232425;
@@ -106,6 +109,10 @@ html {
   --shadow-body: #{$light-body-shadow};
   --shadow-svg-title: #{drop-shadow($title-shadow)};
   --svg-stroke: #{$light-svg-title};
+  --color-red-button-translucent: #{rgba($tomato-color, 0.15)};
+  --color-red-button-text: #{$dark-text-tomato-color};
+  --color-red-button: #{$tomato-color};
+  --color-red-button-hover: #{darken($tomato-color, 20%)};
 }
 
 html[class*="dark"] {
@@ -128,6 +135,7 @@ html[class*="dark"] {
   --color-button-text: #{$dark-button-text};
   --color-button-hover: #{darken($dark-button-color, 20%)};
   --color-button-translucent: #{rgba($dark-button-color, 0.15)};
+  --color-red-button-text: #{$tomato-color-pale};
   --shadow-body: #{$dark-body-shadow};
   --shadow-svg-title: #{drop-shadow($title-shadow)};
   --svg-stroke: #{$dark-svg-title};
