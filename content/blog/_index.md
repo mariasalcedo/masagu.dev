@@ -1,5 +1,5 @@
 ---
-aliases: ["posts", "articles", "blog", "showcase", "docs"]
+aliases: ["blog"]
 title: "Blog"
 author: "Maria Salcedo"
 type: "postcard"

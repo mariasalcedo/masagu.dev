@@ -111,6 +111,7 @@ html {
   --svg-stroke: #{$light-svg-title};
   --color-red-button-translucent: #{rgba($tomato-color, 0.15)};
   --color-red-button-text: #{$dark-text-tomato-color};
+  --color-single-a-text: #{$tomato-color};
   --color-red-button: #{$tomato-color};
   --color-red-button-hover: #{darken($tomato-color, 20%)};
   --color-footer-text: #{$light-footer-color};
@@ -139,6 +140,7 @@ html[class*="dark"] {
   --color-button-hover: #{darken($dark-button-color, 20%)};
   --color-button-translucent: #{rgba($dark-button-color, 0.15)};
   --color-red-button-text: #{$tomato-color-pale};
+  --color-single-a-text: #{$tomato-color-pale};
   --color-footer-text: #{$dark-footer-color};
   --shadow-body: #{$dark-body-shadow};
   --shadow-svg-title: #{drop-shadow($title-shadow)};

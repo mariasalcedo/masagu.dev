@@ -18,5 +18,6 @@ $fontsPath: '{{ printf "../%s" (default "fonts/" .Site.Params.fontsDir) }}';
 @import "list";
 @import "impressum";
 @import "posts";
+@import "single-postcard";
 @import "postcard";
 @import "preview";
