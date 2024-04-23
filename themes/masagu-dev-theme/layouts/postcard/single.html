@@ -8,13 +8,13 @@
     {{ end }}
 </section>
 <section class="postcard-layout">
-    <div class="postcard-item">
+    <div class="postcard-item" style="pointer-events:none;">
         <div class="postcard-title" style="font-size: 0.75rem; white-space: unset;">
             {{- with .Params.subtitle }}
-            <span>{{ . }}</span><span class="postcard-title__end"> _</span>
+            <span style="display: flex; justify-content: right;" >{{ . }}</span>
             {{- end }}
             <div class="postcard-metadata" style="margin-top: 0.45rem;">
-                <span>{{ partial "date" . }}</span>
+                <div style="display: flex; justify-content: right;">{{ partial "date" . }}</div>
             </div>
         </div>
         <div class="postcard-summary" style="color:var(--color-text);">
@@ -29,5 +29,5 @@
     </div>
 </section>
 
-{{ partial "comments.html" . }}
+{{ partial "postcard/comments.html" . }}
 {{ end }}

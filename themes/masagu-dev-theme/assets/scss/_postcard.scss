@@ -35,7 +35,6 @@
       border-bottom: 1px solid #3a62ce;
       padding-bottom: 0.5rem;
       @media screen and (min-width: $xl_width) {
-        //margin: .5rem 1rem;
         @include text-lg;
         white-space: normal;
       }
@@ -60,20 +59,20 @@
       @include text-xs;
       color: var(--color-text-secondary);
       white-space: pre-line;
-      margin: 0 0;
+      margin: 0.5rem 0;
       @media screen and (min-width: $md_width) {
         @include text-xs;
-        margin: 0 2rem;
+        margin: 0.5rem 2rem;
       }
       @media screen and (min-width: $xl_width) {
-        margin: .5rem 2rem;
+        margin: 1.5rem 2rem;
         @include text-sm;
       }
     }
 
     .postcard-metadata {
       @include text-xs;
-      color: var(--color-text-secondary);
+      color: var(--color-text);
     }
   }
 }
