@@ -1,0 +1,109 @@
+.impressum {
+  padding: 40px 20px;
+  flex-grow: 0;
+  color: $light-footer-color;
+
+  button {
+    @include font-bold;
+  }
+
+  [class*="dark"] & {
+    color: $dark-footer-color;
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    backdrop-filter: blur(5px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+  }
+
+  &__content {
+    background: $dark-background;
+    color: $light-background;
+    height: max-content;
+    font-family: var(--font);
+    text-align: left;
+    left: 50%;
+    top: 50%;
+    max-height: 80%;
+    max-width: 80%;
+    position: fixed;
+    width: max-content;
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+    overflow-x:hidden;
+    overflow-y: scroll;
+    padding: 75px;
+    border-radius: 15px;
+
+    p {
+      margin: 0.7rem;
+    }
+
+    button {
+      background: $dark-background;
+      cursor: pointer;
+      font-size: 35px;
+      padding: 10px;
+      position: fixed;
+      right: 5vw;
+      top: 25px;
+
+      [class*="dark"] & {
+        background: $light-background;
+      }
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        color: $light-background;
+
+        [class*="dark"] & {
+          color: $dark-background;
+        }
+      }
+    }
+
+    [class*="dark"] & {
+      background: $light-background;
+      color: $dark-background;
+    }
+
+    @media (max-width: $tablet_width) {
+      margin-top: 10px;
+      @include text-xxs;
+      max-width: 300px;
+    }
+
+    & > *:not(:last-child)::after {
+      padding: 0 5px;
+
+      @media (max-width: $tablet_width) {
+        content: "";
+        padding: 0;
+      }
+    }
+
+    & > *:last-child {
+      padding: 0 0px;
+
+      @media (max-width: $tablet_width) {
+        padding: 0;
+      }
+    }
+  }
+}
