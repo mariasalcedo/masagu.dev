@@ -7,22 +7,22 @@
     {{- partial "content.html" (dict "content" $content) -}}
     {{ end }}
 </section>
-<section class="postcard-layout">
-    <div class="postcard-item" style="pointer-events:none;">
-        <div class="postcard-title" style="font-size: 0.75rem; white-space: unset;">
+<section class="single-postcard">
+    <div class="single-postcard__item">
+        <div class="single-postcard__item__title">
             {{- with .Params.subtitle }}
-            <span style="display: flex; justify-content: right;" >{{ . }}</span>
+            <span class="single-postcard__item__title__sub" >{{ . }}</span>
             {{- end }}
-            <div class="postcard-metadata" style="margin-top: 0.45rem;">
-                <div style="display: flex; justify-content: right;">{{ partial "date" . }}</div>
+            <div class="single-postcard__item__metadata single-postcard__item__flex_right">
+                {{ partial "date" . }}
             </div>
         </div>
-        <div class="postcard-summary" style="color:var(--color-text);">
+        <div class="single-postcard__item__content">
             <p>{{ .Content }}</p>
         </div>
-        <div class="postcard-title">
+        <div class="single-postcard__item__title">
         </div>
-        <div class="postcard-metadata post__meta" style="margin-top: 1rem;">
+        <div class="single-postcard__item__metadata post__meta" style="margin-top: 1rem;">
             <span>{{ partial "tags" . }}</span>
             <a href="/blog"><span class="post__tag button button_red">Back to Blog</span></a>
         </div>

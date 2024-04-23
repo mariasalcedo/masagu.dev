@@ -2,6 +2,7 @@ baseURL = 'http://www.masagu.dev/'
 languageCode = 'en-us'
 title = 'Masagu.dev'
 theme = "masagu-dev-theme"
+paginate = 10
 
 [params]
   title = "Masagu.dev"
@@ -10,17 +11,39 @@ theme = "masagu-dev-theme"
   background = ""
   mastodon = "https://mastodon.green/@masagu"
 
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.highlight]
+    anchorLineNos = true
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = true
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = true
+    style = 'monokai'
+    tabWidth = 4
+  [markup.goldmark.renderer]
+    unsafe = true
+
 [menu]
   [[menu.main]]
     name = "Home"
     url = "/"
     weight = 1
   [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 2
+  [[menu.main]]
     name = "About"
     url = "https://www.github.com/mariasalcedo"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name = "Q&A"
     url = "https://github.com/mariasalcedo/masagu.dev/discussions"
-    weight = 3
-
+    weight = 4
