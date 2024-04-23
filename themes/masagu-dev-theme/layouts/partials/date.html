@@ -1,7 +1,7 @@
 {{ if .IsPage }}
 <span class="post__date">
       {{ with or (or .Params.author (index (or .Site.Params.author dict) .Section)) "" }}
-      {{ . }}  <span class="color__tomato" style="padding:0 10px;" >></span>
+      By {{ . }}  <span class="color__tomato" style="padding:0 10px;" >></span>
       {{ end }}
       {{ .Date.Format "2006.01.02" }} <span class="color__tomato" style="padding:0 10px;">  ·  </span> {{ .ReadingTime }} min read
 </span>
