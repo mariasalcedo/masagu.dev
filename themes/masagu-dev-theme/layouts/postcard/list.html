@@ -2,7 +2,7 @@
 
 {{ if and .Content (eq .Paginator.PageNumber 1) }}
 <section class="postcard-header">
-    {{- partial "postcard/content.html" (dict "content" .Title) -}}
+    {{- partial "content.html" (dict "content" .Title) -}}
 </section>
 {{ end }}
 

@@ -2,12 +2,14 @@
 <section class="postcard-header">
     {{ $content := .Title}}
     {{ with .Site.GetPage "section" "blog" }}
-    {{- partial "postcard/content.html" (dict "content" $content "index" .Title) -}}
+    {{- partial "content.html" (dict "content" $content "index" .Title) -}}
+    {{ else }}
+    {{- partial "content.html" (dict "content" $content) -}}
     {{ end }}
 </section>
 <section class="postcard-layout">
     <div class="postcard-item">
-        <div class="postcard-title" style="font-size: 0.75rem;">
+        <div class="postcard-title" style="font-size: 0.75rem; white-space: unset;">
             {{- with .Params.subtitle }}
             <span>{{ . }}</span><span class="postcard-title__end"> _</span>
             {{- end }}
@@ -27,5 +29,5 @@
     </div>
 </section>
 
-{{ partial "comments.html" . }}
+{{ partial "postcard/comments.html" . }}
 {{ end }}
