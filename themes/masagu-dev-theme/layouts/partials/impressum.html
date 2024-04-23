@@ -1,0 +1,20 @@
+<div class="impressum">
+    <button type="button" aria-expanded="false" onclick="toggleImpressum()">
+        Impressum
+    </button>
+    <div id="impressum" class="impressum__hidden">
+        <div class="impressum__backdrop">
+            <div class="impressum__content">
+                <div>
+                    {{ with .Site.GetPage "section" "impressum" }}
+                    {{ .Content }}
+                    {{ end }}
+                </div>
+                <button aria-label="Close impressum"  type="button" tabindex="0"
+                        onclick="toggleImpressum()">
+                    {{- partial "svg/x.svg" . -}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

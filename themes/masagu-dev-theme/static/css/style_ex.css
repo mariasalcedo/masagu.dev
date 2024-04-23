@@ -1,70 +1,3 @@
-:host, :root {
-    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
-    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
-    --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
-    --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
-    --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
-    --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
-    --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
-    --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
-    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands"
-}
-
-svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
-    overflow: visible;
-    box-sizing: content-box
-}
-
-.svg-inline--fa {
-    display: inline-block;
-    height: 1em;
-    overflow: visible;
-    vertical-align: -.125em
-}
-
-.svg-inline--fa.fa-2xs {
-    vertical-align: .1em
-}
-
-.svg-inline--fa.fa-xs {
-    vertical-align: 0
-}
-
-.svg-inline--fa.fa-sm {
-    vertical-align: -.07143em
-}
-
-.svg-inline--fa.fa-lg {
-    vertical-align: -.2em
-}
-
-.svg-inline--fa.fa-xl {
-    vertical-align: -.25em
-}
-
-.svg-inline--fa.fa-2xl {
-    vertical-align: -.3125em
-}
-
-.svg-inline--fa.fa-pull-left {
-    margin-right: .3em;
-    width: auto
-}
-
-.svg-inline--fa.fa-pull-right {
-    margin-left: .3em;
-    width: auto
-}
-
-.svg-inline--fa.fa-li {
-    width: 2em;
-    top: .25em;
-}
-
-.svg-inline--fa.fa-fw {
-    width: 1.25em;
-}
-
 .fa-layers svg.svg-inline--fa {
     bottom: 0;
     left: 0;
@@ -595,10 +528,10 @@ abbr:where([title]) {
     text-decoration: underline dotted
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit
-}
+/*h1, h2, h3, h4, h5, h6 {*/
+/*    font-size: inherit;*/
+/*    font-weight: inherit*/
+/*}*/
 
 a {
     color: inherit;
@@ -1214,6 +1147,10 @@ img, video {
     margin-bottom: 2rem
 }
 
+.mb-10 {
+    margin-bottom: 3.75rem
+}
+
 .ml-1 {
     margin-left: .25rem
 }
@@ -1272,6 +1209,10 @@ img, video {
 
 .mt-10 {
     margin-top: 3.25rem
+}
+
+.mt-13 {
+    margin-top: 3.75rem
 }
 
 .mt-\[calc\(theme\(spacing\.16\)-theme\(spacing\.3\)\)\] {
@@ -1507,7 +1448,7 @@ img, video {
 }
 
 .items-center {
-    align-items: center
+    align-items: end;
 }
 
 .items-baseline {
@@ -1673,7 +1614,7 @@ img, video {
 
 .bg-white {
     --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255/var(--tw-bg-opacity))
+    background-color: rgb(255 255 255/1)
 }
 
 .bg-white\/90 {
@@ -1845,7 +1786,7 @@ img, video {
 }
 
 .pt-3 {
-    padding-top: .75rem
+    padding-top: 1.5rem
 }
 
 .pt-6 {
@@ -1956,18 +1897,15 @@ img, video {
 }
 
 .ring-1 {
-    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+    box-shadow: 0 0 0 0 #fff, 0 0 0 1px rgba(59, 130, 246, .5), 0 0 #0000
 }
 
 .ring-zinc-100 {
-    --tw-ring-opacity: 1;
-    --tw-ring-color: rgb(244 244 245/var(--tw-ring-opacity))
+    box-shadow: 0 0 0 0 #fff, 0 0 0 1px rgb(244 244 245/1), 0 0 #0000;
 }
 
 .ring-zinc-900\/5 {
-    --tw-ring-color: rgba(24, 24, 27, .05)
+    box-shadow: 0 0 0 0 #fff, 0 0 0 1px rgba(24, 24, 27, .05), 0 0 #0000;
 }
 
 .backdrop-blur {
@@ -1975,8 +1913,8 @@ img, video {
 }
 
 .backdrop-blur, .backdrop-blur-sm {
-    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)
+    -webkit-backdrop-filter: var(--tw-backdrop-blur);
+    backdrop-filter: var(--tw-backdrop-blur);
 }
 
 .backdrop-blur-sm {
@@ -2376,7 +2314,7 @@ img, video {
 }
 
 @media (min-width: 640px) {
-    
+
     .sm\:justify-center {
         justify-content: center
     }
@@ -2388,6 +2326,14 @@ img, video {
 
     .sm\:mt-6 {
         margin-top: 1.95rem
+    }
+
+    .sm\:mt-8 {
+        margin-top: 2.5rem
+    }
+
+    .sm\:mb-6 {
+        margin-bottom: 1.95rem
     }
 
     .sm\:mt-10 {

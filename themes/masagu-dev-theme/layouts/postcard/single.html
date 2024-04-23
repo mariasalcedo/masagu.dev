@@ -1,6 +1,9 @@
 {{ define "main" }}
 <section class="postcard-header">
-    {{- partial "postcard/content.html" (dict "content" .Title "index" "Blog") -}}
+    {{ $content := .Title}}
+    {{ with .Site.GetPage "section" "blog" }}
+    {{- partial "postcard/content.html" (dict "content" $content "index" .Title) -}}
+    {{ end }}
 </section>
 <section class="postcard-layout">
     <div class="postcard-item">
