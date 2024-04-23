@@ -2,11 +2,7 @@
   padding: 40px 20px;
   flex-grow: 0;
   font-family: $font-source-code-pro;
-  color: $light-footer-color;
-
-  [class*="dark"] & {
-    color: $dark-footer-color;
-  }
+  color: var(--color-footer-text);
 
   &__inner {
     display: flex;
@@ -28,7 +24,6 @@
     align-items: center;
     font-size: 1rem;
     padding: 0 5px;
-    //color: $light-color-secondary;
 
     @media (max-width: $tablet_width) {
       margin-top: 10px;

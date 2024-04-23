@@ -1,12 +1,21 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<article>
+        <span class="postcard-header">
+            {{ $content := .Title}}
+            {{ with .Site.GetPage "tags" }}
+            {{ if and (not (eq $content .LinkTitle)) }}
+            {{- partial "content.html" (dict "content" $content "index" .LinkTitle) -}}
+            {{ else }}
+            {{- partial "content.html" (dict "content" $content) -}}
+            {{ end }}
+            {{ end }}
+        </span>
+</article>
 {{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ partial "metadata.html" . }}
-    <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
-    </a>
-</p>
+<div class="list">
+    <ul>
+        <li><span class="color__tomato">></span> <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+    </ul>
+</div>
 {{ end }}
 {{ end }}

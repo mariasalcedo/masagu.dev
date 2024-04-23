@@ -1,14 +1,10 @@
 .impressum {
   padding: 40px 20px;
   flex-grow: 0;
-  color: $light-footer-color;
+  color: var(--color-footer-text);
 
   button {
     @include font-bold;
-  }
-
-  [class*="dark"] & {
-    color: $dark-footer-color;
   }
 
   &__hidden {
@@ -30,8 +26,8 @@
   }
 
   &__content {
-    background: $dark-background;
-    color: $light-background;
+    color: var(--color-impressum-text);
+    background: var(--color-impressum-background);
     height: max-content;
     font-family: var(--font);
     text-align: left;
@@ -56,7 +52,7 @@
     }
 
     button {
-      background: $dark-background;
+      background: var(--color-impressum-background);
       cursor: pointer;
       font-size: 35px;
       padding: 10px;
@@ -64,23 +60,11 @@
       right: 5vw;
       top: 25px;
 
-      [class*="dark"] & {
-        background: $light-background;
-      }
       svg {
         width: 1.5rem;
         height: 1.5rem;
-        color: $light-background;
-
-        [class*="dark"] & {
-          color: $dark-background;
-        }
+        color: var(--color-impressum-text);
       }
-    }
-
-    [class*="dark"] & {
-      background: $light-background;
-      color: $dark-background;
     }
 
     @media (max-width: $tablet_width) {
