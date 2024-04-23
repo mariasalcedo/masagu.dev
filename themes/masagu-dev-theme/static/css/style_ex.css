@@ -626,9 +626,9 @@ summary {
     display: list-item
 }
 
-blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
+/* blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
     margin: 0
-}
+} */
 
 fieldset {
     margin: 0
