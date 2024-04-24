@@ -23,9 +23,9 @@ In the near future, I'd like to make it available as a rightful template for eve
 
 A brownie point is, having full control of your sources, one can stay compliant with EU GDPR guidelines. Meaning: no Javascript nor cookies are stealing data from you while surfing through my domain.
 
-## [SaaS](https://sass-lang.com/)
+## [Sass](https://sass-lang.com/)
 
-AND... what about Saas?! Oh lord! This was indeed a great discovery.
+AND... what about Sass?! Oh lord! This was indeed a great discovery.
 In short, it is CSS but on steroids.
 This makes stylesheets far less painful for Backend folks like me.
 
