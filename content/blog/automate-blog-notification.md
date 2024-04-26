@@ -15,7 +15,7 @@ Which for me means...
 
 <!--more-->
 
-I want my GitHub account's main page and mastodon account to be ✨automagically✨updated/tooted/announced with the info of any newly fresh blog post.
+I want my GitHub account's main page and mastodon account to be ✨automagically✨updated/tooted/announced with the info of any newly fresh blog post there is and will ever be.
 ## Update GitHub repo's README.md
 
 Since I am using Hugo on this website, it conveniently comes with an [Atom's feed](https://www.masagu.dev/index.xml) out of the box.
@@ -95,7 +95,7 @@ Steps of this job are:
 1. Test go scripts and oauth credentials
 2. Generate `README.md` with new blog post information
 3. If README contains new info, push it to the repository
-4. If file's pushed, toot info on my Mastodon account (https://mastodon.green/@masagu"). Important fact is to store Mastodon Credentials at a repository level, as GitHub Actions secrets.
+4. If file's pushed, toot info on my [Mastodon account](https://mastodon.green/@masagu). Important fact is to store Mastodon Credentials at a repository level, as GitHub Actions secrets.
 
 Differences with the current `README.md` and the generated one will be checked, making use of git:
 ```bash
