@@ -38,8 +38,18 @@
       }
       @media screen and (min-width: $xl_width) {
         margin: 1.5rem 2rem;
-        @include text-lg;
       }
+
+      pre {
+        @include text-xs;
+        overflow: scroll;
+      }
+
+      ol {
+        list-style: decimal;
+        padding-left: 1.5rem;
+      }
+
       a {
         color: var(--color-single-a-text);
       }
