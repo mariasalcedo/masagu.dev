@@ -12,7 +12,9 @@ Everytime I publish a blog, I want to announce it across the internet.
 Although I feel I waste of time doing so.
 Therefore, I dedicate a blog post on how I managed to automate it.
 Which for me means...
+
 <!--more -->
+
 I want my GitHub account's main page and mastodon account to be ✨automagically✨updated/tooted/announced with the info of any newly fresh blog post.
 ## Update GitHub repo's README.md
 
