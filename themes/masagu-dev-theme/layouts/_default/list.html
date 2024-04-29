@@ -3,19 +3,27 @@
         <span class="postcard-header">
             {{ $content := .Title}}
             {{ with .Site.GetPage "tags" }}
-            {{ if and (not (eq $content .LinkTitle)) }}
-            {{- partial "content.html" (dict "content" $content "index" .LinkTitle) -}}
+            {{ if not (eq $content .LinkTitle) }}
+            {{- partial "title.html" (dict "content" $content "index" .LinkTitle) -}}
             {{ else }}
-            {{- partial "content.html" (dict "content" $content) -}}
+            {{- partial "title.html" (dict "content" $content) -}}
             {{ end }}
             {{ end }}
         </span>
 </article>
-{{ range .Pages.ByPublishDate.Reverse }}
-<div class="list">
-    <ul>
-        <li><span class="color__tomato">></span> <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-    </ul>
-</div>
+{{ $pages := .Pages.ByPublishDate.Reverse }}
+{{ with .Site.GetPage "tags" }}
+    {{ if eq $content .LinkTitle }}
+        {{- partial "taglist.html" . -}}
+    {{ else }}
+        {{ range $pages }}
+            <div class="list">
+                <ul>
+                    <li><span class="color__tomato">></span> <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+                </ul>
+            </div>
+        {{ end }}
+    {{ end }}
 {{ end }}
+
 {{ end }}

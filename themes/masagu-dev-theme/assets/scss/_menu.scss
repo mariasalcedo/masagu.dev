@@ -1,0 +1,22 @@
+.menu {
+  @include text-sm;
+  @include font-medium;
+  pointer-events: auto;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    border-radius: 9999px;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    background-color: var(--color-menu-background);
+    color: var(--color-menu-text);
+    box-shadow: var(--color-menu-shadow);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+}
+

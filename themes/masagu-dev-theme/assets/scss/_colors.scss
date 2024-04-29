@@ -17,10 +17,14 @@ $light-footer-color: #52525BFF;
 $light-shadow-color: #3B82F67F;
 $light-body-shadow: 0px 10px 10px 10px $light-shadow-color;
 $light-svg-title: #3f5787;
+$light-menu-background: #FFFFFFE5;
+$light-menu-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px 3px rgba(0, 0, 0, 0.06); //0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgba(39, 39, 42, .05), 0 4px 6px -4px rgba(39, 39, 42, .05);
+$light-menu-text: #27272AFF;
 
 /* Dark theme colors */
 $dark-background: #000000;
-$dark-background-secondary: #18181BFF;
+//$dark-background-secondary: #18181BFF;
+$dark-background-secondary: rgba(18, 34, 61, 0.4);
 $dark-background-header: #1b1c1d;
 $dark-color: #a9a9b3;
 $dark-color-variant: white;
@@ -33,6 +37,9 @@ $dark-button-text: #93c5fd;
 $dark-shadow-color: #3B82F633;
 $dark-body-shadow: 0px 10px 10px 10px $dark-shadow-color;
 $dark-svg-title: #ffffff;
+$dark-menu-background: #27272AE5;
+$dark-menu-shadow: 0 0 0 0 #fff, 0 0 0 1px hsla(0, 0%, 100%, .1), 0 0 #0000;//0 0 #0000, rgba(39, 39, 42, .05), 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(39, 39, 42, .05);
+$dark-menu-text: #E4E4E7FF;
 
 /* Heart color */
 $dark-text-tomato-color: #280902;
@@ -117,6 +124,9 @@ html {
   --color-footer-text: #{$light-footer-color};
   --color-impressum-text: #{$light-background};
   --color-impressum-background: #{$dark-background};
+  --color-menu-background: #{$light-menu-background};
+  --color-menu-shadow: #{$light-menu-shadow};
+  --color-menu-text: #{$light-menu-text};
 }
 
 html[class*="dark"] {
@@ -147,6 +157,9 @@ html[class*="dark"] {
   --svg-stroke: #{$dark-svg-title};
   --color-impressum-text: #{$dark-background};
   --color-impressum-background: #{$light-background};
+  --color-menu-background: #{$dark-menu-background};
+  --color-menu-shadow: #{$dark-menu-shadow};
+  --color-menu-text: #{$dark-menu-text};
 }
 
 @mixin dimmed {

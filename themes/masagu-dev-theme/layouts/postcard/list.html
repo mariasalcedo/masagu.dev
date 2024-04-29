@@ -2,11 +2,9 @@
 
 {{ if and .Content (eq .Paginator.PageNumber 1) }}
 <section class="postcard-header">
-    {{- partial "content.html" (dict "content" .Title) -}}
+    {{- partial "title.html" (dict "content" .Title) -}}
 </section>
 {{ end }}
-
-{{ partial "taglist.html" . }}
 
 {{ partial "postcard/preview.html" (dict "pages" .RegularPages "ctx" .) }}
 

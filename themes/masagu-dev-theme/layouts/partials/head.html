@@ -2,6 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/css/style_ex.css">
+    <link rel="stylesheet" type="text/css" href="/css/base16-snazzy.css">
     <link rel="canonical" href="{{ .Permalink }}">
 
     <!-- Mastodon Verify -->
@@ -16,7 +17,7 @@
     {{ end }}
     <title>{{ $title }}</title>
 
-    <!-- CSS -->
+    <!-- SCSS to CSS -->
     {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "scss/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
