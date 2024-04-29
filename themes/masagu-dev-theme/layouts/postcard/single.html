@@ -2,27 +2,27 @@
 <section class="postcard-header">
     {{ $content := .Title}}
     {{ with .Site.GetPage "section" "blog" }}
-    {{- partial "content.html" (dict "content" $content "index" .Title) -}}
+    {{- partial "title.html" (dict "content" $content "index" .Title) -}}
     {{ else }}
-    {{- partial "content.html" (dict "content" $content) -}}
+    {{- partial "title.html" (dict "content" $content) -}}
     {{ end }}
 </section>
-<section class="single-postcard">
-    <div class="single-postcard__item">
-        <div class="single-postcard__item__title">
+<section class="single-post">
+    <div class="single-post__item">
+        <div class="single-post__item__title">
             {{- with .Params.subtitle }}
-            <span class="single-postcard__item__title__sub" >{{ . }}</span>
+            <span class="single-post__item__title__sub" >{{ . }}</span>
             {{- end }}
-            <div class="single-postcard__item__metadata single-postcard__item__flex_right">
+            <div class="single-post__item__metadata single-post__item__flex_right">
                 {{ partial "date" . }}
             </div>
         </div>
-        <div class="single-postcard__item__content">
+        <div class="single-post__item__content">
             <p>{{ .Content }}</p>
         </div>
-        <div class="single-postcard__item__title">
+        <div class="single-post__item__title">
         </div>
-        <div class="single-postcard__item__metadata post__meta" style="margin-top: 1rem;">
+        <div class="single-post__item__metadata post__meta" style="margin-top: 1rem;">
             <span>{{ partial "tags" . }}</span>
             <a href="/blog"><span class="post__tag button button_red">Back to Blog</span></a>
         </div>

@@ -13,11 +13,13 @@ $fontsPath: '{{ printf "../%s" (default "fonts/" .Site.Params.fontsDir) }}';
 @import "body-wrapper";
 @import "header";
 @import "footer";
+@import "dark-mode-button";
+@import "menu";
 
 /* Modules */
 @import "list";
 @import "impressum";
 @import "posts";
-@import "single-postcard";
+@import "single-post";
 @import "postcard";
 @import "preview";

@@ -1,0 +1,18 @@
+.dark-mode-button {
+  pointer-events: auto;
+  padding-top: 1.5rem;
+
+  button {
+    border-radius: 9999px;
+    padding: .5rem .75rem;
+    background: var(--color-background);
+    background-color: var(--color-menu-background);
+    box-shadow: $light-menu-shadow;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s
+    // dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20
+  }
+}

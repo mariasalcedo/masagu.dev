@@ -1645,22 +1645,22 @@ img, video {
 }
 
 .from-teal-500\/0 {
-    --tw-gradient-from: rgba(20, 184, 166, 0) var(--tw-gradient-from-position);
+    --tw-gradient-from: rgba(42, 82, 190, 0) var(--tw-gradient-from-position);
     --tw-gradient-from-position: ;
-    --tw-gradient-to: rgba(20, 184, 166, 0) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(42, 82, 190, 0) var(--tw-gradient-from-position);
     --tw-gradient-to-position: ;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
 }
 
 .via-teal-500\/40 {
     --tw-gradient-via-position: ;
-    --tw-gradient-to: rgba(20, 184, 166, 0) var(--tw-gradient-to-position);
+    --tw-gradient-to: rgba(42, 82, 190, 0) var(--tw-gradient-to-position);
     --tw-gradient-to-position: ;
-    --tw-gradient-stops: var(--tw-gradient-from), rgba(20, 184, 166, .4) var(--tw-gradient-via-position), var(--tw-gradient-to)
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(74, 121, 255, .8) var(--tw-gradient-via-position), var(--tw-gradient-to)
 }
 
 .to-teal-500\/0 {
-    --tw-gradient-to: rgba(20, 184, 166, 0) var(--tw-gradient-to-position);
+    --tw-gradient-to: rgba(42, 82, 190, 0) var(--tw-gradient-to-position);
     --tw-gradient-to-position: ;
 }
 
@@ -1852,7 +1852,7 @@ img, video {
 
 .text-zinc-800 {
     --tw-text-opacity: 1;
-    color: rgb(39 39 42/var(--tw-text-opacity))
+    color: rgb(39 39 42/1)
 }
 
 .text-zinc-900 {
@@ -1988,7 +1988,7 @@ img, video {
 
 .hover\:text-teal-500:hover {
     --tw-text-opacity: 1;
-    color: rgb(20 184 166/var(--tw-text-opacity))
+    color: rgb(74, 121, 255)
 }
 
 .focus\:border-teal-500:focus {
@@ -2135,22 +2135,22 @@ img, video {
 }
 
 :is(.dark .dark\:from-teal-400\/0) {
-    --tw-gradient-from: rgba(45, 212, 191, 0) var(--tw-gradient-from-position);
+    --tw-gradient-from: rgba(74, 114, 232, 0) var(--tw-gradient-from-position);
     --tw-gradient-from-position: ;
-    --tw-gradient-to: rgba(45, 212, 191, 0) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(74, 114, 232, 0) var(--tw-gradient-from-position);
     --tw-gradient-to-position: ;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
 }
 
 :is(.dark .dark\:via-teal-400\/40) {
     --tw-gradient-via-position: ;
-    --tw-gradient-to: rgba(45, 212, 191, 0) var(--tw-gradient-to-position);
+    --tw-gradient-to: rgba(74, 114, 232, 0) var(--tw-gradient-to-position);
     --tw-gradient-to-position: ;
-    --tw-gradient-stops: var(--tw-gradient-from), rgba(45, 212, 191, .4) var(--tw-gradient-via-position), var(--tw-gradient-to)
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(74, 121, 255, 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to)
 }
 
 :is(.dark .dark\:to-teal-400\/0) {
-    --tw-gradient-to: rgba(45, 212, 191, 0) var(--tw-gradient-to-position);
+    --tw-gradient-to: rgba(74, 114, 232, 0) var(--tw-gradient-to-position);
     --tw-gradient-to-position: ;
 }
 
@@ -2191,6 +2191,11 @@ img, video {
     color: rgb(45 212 191/var(--tw-text-opacity))
 }
 
+:is(.dark .dark\:text-tomato) {
+    opacity: 0.5;
+    color: #ec2d01;
+}
+
 :is(.dark .dark\:text-zinc-100) {
     --tw-text-opacity: 1;
     color: rgb(244 244 245/var(--tw-text-opacity))
@@ -2223,7 +2228,7 @@ img, video {
 }
 
 :is(.dark .dark\:ring-white\/10) {
-    --tw-ring-color: hsla(0, 0%, 100%, .1)
+    box-shadow: 0 0 0 0 #fff, 0 0 0 1px hsla(0, 0%, 100%, .1), 0 0 #0000;
 }
 
 :is(.dark .dark\:ring-zinc-300\/20) {
@@ -2262,12 +2267,12 @@ img, video {
 
 :is(.dark .dark\:hover\:text-teal-400:hover) {
     --tw-text-opacity: 1;
-    color: rgb(45 212 191/var(--tw-text-opacity))
+    color: #2a52be;
 }
 
 :is(.dark .dark\:hover\:text-teal-500:hover) {
     --tw-text-opacity: 1;
-    color: rgb(20 184 166/var(--tw-text-opacity))
+    color: #2a52be;
 }
 
 :is(.dark .dark\:hover\:text-zinc-50:hover) {
