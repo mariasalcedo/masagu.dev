@@ -3,7 +3,7 @@
   @include font-medium;
   pointer-events: auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: $md_width) {
     display: block;
   }
 

@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/* General */
-$title-shadow: 6px 6px 4px rgba(59, 130, 246, .5);
-
 /* Light colors */
 $light-background: #eaeaea;
 $light-background-color: #6893A6;
@@ -20,6 +17,7 @@ $light-svg-title: #3f5787;
 $light-menu-background: #FFFFFFE5;
 $light-menu-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px 3px rgba(0, 0, 0, 0.06); //0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgba(39, 39, 42, .05), 0 4px 6px -4px rgba(39, 39, 42, .05);
 $light-menu-text: #27272AFF;
+$light-title-shadow: 6px 6px 4px rgba(59, 130, 246, .5);
 
 /* Dark theme colors */
 $dark-background: #000000;
@@ -40,6 +38,7 @@ $dark-svg-title: #ffffff;
 $dark-menu-background: #27272AE5;
 $dark-menu-shadow: 0 0 0 0 #fff, 0 0 0 1px hsla(0, 0%, 100%, .1), 0 0 #0000;//0 0 #0000, rgba(39, 39, 42, .05), 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -4px rgba(39, 39, 42, .05);
 $dark-menu-text: #E4E4E7FF;
+$dark-title-shadow: 6px 6px 4px rgba(147, 197, 253, .1);
 
 /* Heart color */
 $dark-text-tomato-color: #280902;
@@ -99,6 +98,7 @@ html {
   --color-border: #{$gray-300};
   --color-border-collapsible-menu: #{$gray-200};
   --color-background: #{$light-background-color};
+  --color-background-header: #{#FFFFFF};
   --color-background-hover: #{$gray-50};
   --color-background-overlay: #{$light-background-secondary};
   --color-background-inline-code: #{$gray-100};
@@ -114,7 +114,7 @@ html {
   --color-button-translucent: #{rgba($cerulean-500, 0.15)};
   --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --shadow-body: #{$light-body-shadow};
-  --shadow-svg-title: #{drop-shadow($title-shadow)};
+  --shadow-svg-title: #{drop-shadow($light-title-shadow)};
   --svg-stroke: #{$light-svg-title};
   --color-red-button-translucent: #{rgba($tomato-color, 0.15)};
   --color-red-button-text: #{$dark-text-tomato-color};
@@ -136,10 +136,11 @@ html[class*="dark"] {
   --color-border: #{$gray-500};
   --color-border-collapsible-menu: #{$gray-550};
   --color-background: #{$dark-background};
-  --color-background-hover: #{$gray-600};
+  --color-background-header: #{$dark-background};
+  --color-background-hover: #{$dark-background};
   --color-background-overlay: #{$dark-background-secondary};
   --color-background-inline-code: #{$gray-600};
-  --color-background-card: #{$gray-700};
+  --color-background-card: rgba(75, 89, 114, 0.5);
   --color-background-mark: #fff1a7;
   --color-link: #93c5fd;
   --color-navbar-item-inactive: #{$gray-400};
@@ -153,7 +154,7 @@ html[class*="dark"] {
   --color-single-a-text: #{$tomato-color-pale};
   --color-footer-text: #{$dark-footer-color};
   --shadow-body: #{$dark-body-shadow};
-  --shadow-svg-title: #{drop-shadow($title-shadow)};
+  --shadow-svg-title: #{drop-shadow($dark-title-shadow)};
   --svg-stroke: #{$dark-svg-title};
   --color-impressum-text: #{$dark-background};
   --color-impressum-background: #{$light-background};

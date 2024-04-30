@@ -8,9 +8,9 @@ type: "postcard"
 author: "Maria"
 ---
 
-Everytime I publish a blog, I want to announce it across the internet.
-Although I feel I waste my time doing so.
+Everytime I publish a blog, I want to announce it across the internet. Although I feel I waste my time doing so.
 Therefore, I dedicate a blog post on how I managed to automate it.
+
 Which for me means...
 
 <!--more-->
