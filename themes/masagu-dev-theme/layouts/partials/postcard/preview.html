@@ -2,7 +2,6 @@
 
 <div class="postcard-layout">
     {{ range ($pages).ByDate.Reverse }}
-    <a href="{{ .Permalink }}">
         <article>
             <div class="postcard-item">
                 {{- with .Params.thumbnail }}
@@ -26,7 +25,9 @@
                                 <p>{{ .Summary }}</p>
                             </blockquote>
                             <div style="justify-content: right">
+                                <a href="{{ .Permalink }}">
                                 <span class="post__tag button button_red">Continue reading >>></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -35,6 +36,5 @@
                     </div>
                 </div>
         </article>
-    </a>
     {{ end }}
 </div>

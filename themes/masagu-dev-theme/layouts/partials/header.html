@@ -13,7 +13,7 @@
 
         {{ if isset .Site.Menus "main" }}
 
-        <div class="flex flex-1 justify-end md:justify-center sm:justify-center pt-6 px-2">
+        <div class="flex flex-1 justify-end px-2">
             <div class="pointer-events-auto md:hidden">
                 <button class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5
 					    backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20"
@@ -52,7 +52,7 @@
                             </button>
                             <h2 class="text-sm font-medium color__gray_600 dark:text-zinc-400">Masagu's Menu</h2>
                         </div>
-                        <nav class="mt-6">
+                        <nav aria-label="Main mobile menu" class="mt-6">
                             <ul class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                                 {{ range .Site.Menus.main }}
                                 <li>
@@ -69,13 +69,12 @@
 
 
             </div>
-            <nav class="menu">
+            <nav aria-label="Main desktop menu" class="menu hidden">
                 {{ $current_page := .Name }}
                 <ul class="ring-zinc-900/5 dark:ring-white/10">
                     {{ range .Site.Menus.main }}
                     {{ if not (eq .Name "Home") }}
                     <li>
-
                         <a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
                            href="{{ .URL }}"
                             {{ if eq $current_page .Name }}
@@ -96,7 +95,7 @@
         {{ end }}
 
         <div class="dark-mode-button">
-            <button type="button" aria-label="Toggle dark mode" onclick="updateMode()">
+            <button class="" type="button" aria-label="Toggle dark mode" onclick="updateMode()">
                 {{- partial "svg/sun.svg" -}}
                 {{- partial "svg/moon.svg" -}}
             </button>

@@ -18,11 +18,11 @@
     background-color: var(--color-background-card);
     border-radius: .375rem;
     margin: 2rem 0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.5), 6px 6px 4px rgba(59, 130, 246, .2);
 
-    &:hover {
-      background-color: var(--color-background-hover);
-    }
+    //&:hover {
+    //  background-color: var(--color-background-hover);
+    //}
 
     .postcard-title {
       @include text-base;

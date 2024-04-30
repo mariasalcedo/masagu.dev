@@ -2,7 +2,7 @@
   width: 100%;
   background-color: var(--color-background-overlay);
   box-shadow: var(--shadow-body);
-  @media (min-width: $lg_width) {
+  @media (min-width: $xxl_width) {
     width: 80%;
   }
 }
