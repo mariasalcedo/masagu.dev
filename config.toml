@@ -10,6 +10,7 @@ paginate = 10
   message = "Masagu.dev is here"
   background = ""
   mastodon = "https://mastodon.green/@masagu"
+  aboutPic = "images/front-page.png"
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
@@ -40,7 +41,7 @@ paginate = 10
     url = "/blog"
     weight = 2
   [[menu.main]]
-    name = "About"
+    name = "Github"
     url = "https://www.github.com/mariasalcedo"
     weight = 3
   [[menu.main]]

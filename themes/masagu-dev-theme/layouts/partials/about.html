@@ -1,0 +1,50 @@
+<div data-s-d524e3da-4007-4dc6-9a83-5263270318cc="" class="sd appear">
+    <div data-s-4b70ae09-5c47-4e95-8f61-5b74aa3a3c5f="" class="sd appear">
+        <div data-s-a15c4234-3e6b-4823-b505-c372fa7e950e="" class="sd appear"><p
+                data-s-474e3e21-7d98-4246-baa5-580f544c15b4="" data-r-0_0_0_0_2_474e3e21-7d98-4246-baa5-580f544c15b4=""
+                class="text sd appear">DevOps/Backend</p>
+            <div data-s-cf62e37a-3878-4e31-a22d-2bb8300704b7="" class="sd appear"><p
+                    data-s-3df9df93-5478-4ad1-854a-ad2bbe329bd1=""
+                    data-r-0_1_0_0_0_2_3df9df93-5478-4ad1-854a-ad2bbe329bd1="" class="text sd appear">Software</p>
+                <h1 data-s-93f3ce5b-2f65-4e48-a730-a74502773238=""
+                    data-r-1_1_0_0_0_2_93f3ce5b-2f65-4e48-a730-a74502773238="" class="text sd appear">Development</h1>
+            </div>
+            <div data-s-3c030ce3-22c3-4d2f-afbf-e611252b4a27="" class="sd appear"></div>
+        </div>
+        <div data-s-d7a77260-05a0-4188-978f-88eeb9e6e34e="" class="sd appear"><h2
+                data-s-67f5a8ab-a53b-406c-abdb-2ec189b0e308="" data-r-0_1_0_0_2_67f5a8ab-a53b-406c-abdb-2ec189b0e308=""
+                class="text sd appear">By Maria Salcedo</h2>
+
+            <p data-s-e76893b8-242a-46b3-93e7-f75f571bbc68="" data-r-1_1_0_0_2_e76893b8-242a-46b3-93e7-f75f571bbc68=""
+               class="text sd appear">The summit lies ahead. <br>
+                Only a committed, experienced partner can guide you along the way to successfully achieve your goals.</p>
+            <!--            <a href="#services" data-s-11e1ce4a-5746-4d8c-bc9d-9d5756d458f0=""-->
+            <!--               data-r-2_1_0_0_2_11e1ce4a-5746-4d8c-bc9d-9d5756d458f0=""-->
+            <!--               class="text sd appear">Read more</a>-->
+            <div style="display:flex; flex-direction: row">
+                <a href="https://www.linkedin.com/in/maria-salcedo-g/" data-s-11e1ce4a-5746-4d8c-bc9d-9d5756d458f0=""
+                   data-r-2_1_0_0_2_11e1ce4a-5746-4d8c-bc9d-9d5756d458f0=""
+                   class="text sd appear">
+                    {{- partial "svg/linkedin.svg" . -}}
+                </a>
+                <a href="https://www.github.com/mariasalcedo" data-s-11e1ce4a-5746-4d8c-bc9d-9d5756d458f0=""
+                   data-r-2_1_0_0_2_11e1ce4a-5746-4d8c-bc9d-9d5756d458f0=""
+                   class="text sd appear">
+                    {{- partial "svg/github.svg" . -}}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div data-s-a161df9a-c050-4109-9e6c-d58fced4d712="" class="sd appear">
+        {{- with .Param "aboutPic" }}
+        <figure data-s-d9fcfe32-5d52-4d82-91f0-ee404df51b08="" data-r-0_1_0_2_d9fcfe32-5d52-4d82-91f0-ee404df51b08=""
+                class="image sd" style="background-image: url('{{ . | absURL}}');">
+        </figure>
+        {{- end }}
+    </div>
+</div>
+<!--<div xmlns="http://www.w3.org/1999/html">-->
+<!--    <span>-->
+<!--        <a href="https://512kb.club"></a>-->
+<!--    </span>-->
+<!--</div>-->

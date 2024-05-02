@@ -112,9 +112,12 @@ html {
   --color-button-text: #{$cerulean-pale};
   --color-button-hover: #{darken($cerulean-500, 20%)};
   --color-button-translucent: #{rgba($cerulean-500, 0.15)};
+  --font-monospace: monospace;
+  --font-source-code-pro: 'Source Code Pro';
   --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --shadow-body: #{$light-body-shadow};
   --shadow-svg-title: #{drop-shadow($light-title-shadow)};
+  --color-svg-fill: #000000;
   --svg-stroke: #{$light-svg-title};
   --color-red-button-translucent: #{rgba($tomato-color, 0.15)};
   --color-red-button-text: #{$dark-text-tomato-color};
@@ -155,6 +158,7 @@ html[class*="dark"] {
   --color-footer-text: #{$dark-footer-color};
   --shadow-body: #{$dark-body-shadow};
   --shadow-svg-title: #{drop-shadow($dark-title-shadow)};
+  --color-svg-fill: #{$dark-svg-title};
   --svg-stroke: #{$dark-svg-title};
   --color-impressum-text: #{$dark-background};
   --color-impressum-background: #{$light-background};

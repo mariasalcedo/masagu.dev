@@ -1,28 +1,7 @@
 {{ define "main" }}
     <div class="relative flex justify-center px-4 lg:px-8 sm:px-8">
 
-	    {{- partial "svg/coming_soon_index.svg" . -}}
-    
-<!--
-	    <div class="top-left mt-6 flex gap-6">
-	    <div class="group -m-1 p-1">
-        {{ if isset .Site.Params "socialicons" }}
-            <ul>
-                {{ range .Site.Params.SocialIcons }}
-                <li>
-		    {{ $ahref := printf "<a href=\"%s\">" .url | safeHTML }}
-                    {{ $ahref }}
-                    {{ $iconName := .name }}
-		    {{ $icon := printf "<i width=\"60\" height=\"60\" data-feather=\"%s\" class=\"fill-black stroke-black dark:fill-zinc-400 dark:stroke-zinc-400 \"></i>" .name | safeHTML }}
-		    {{ $icon }}</a>
-                </li>
-                {{ end }}
-            </ul>
-        {{ end }}
-	    </div>
-    </div>
- 
-    -->
+	    {{- partial "about" . -}}
 
     </div>
 {{ end }}
