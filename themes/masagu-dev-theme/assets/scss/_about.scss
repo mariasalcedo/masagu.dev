@@ -64,7 +64,7 @@
   max-width: 100%;
   justify-content: flex-start;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $lg_width) {
     font-size: 20px;
   }
 }
@@ -85,7 +85,7 @@
   justify-content: flex-start;
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $lg_width) {
     font-size: 20px;
   }
 }
@@ -167,7 +167,7 @@
   max-width: 100%;
   justify-content: flex-start;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet_width) {
   font-size: 40px;
   }
 }
@@ -228,7 +228,7 @@
   max-width: 100%;
   justify-content: flex-start;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet_width) {
     font-size: 32px;
   }
 
@@ -236,7 +236,7 @@
 .sd[data-s-e76893b8-242a-46b3-93e7-f75f571bbc68] {
   color: var(--color-text);
   flex: none;
-  font-family: var(--s-font-a199e08a);
+  font-family: var(--font);
   font-size: 15px;
   font-weight: 400;
   height: auto;
