@@ -40,6 +40,7 @@
       h2 {
         font-family: $font-source-code-pro;
         @include text-2xl;
+        line-height: 4rem;
       }
 
       pre {
