@@ -10,7 +10,7 @@ paginate = 10
   message = "Masagu.dev is here"
   background = ""
   mastodon = "https://mastodon.green/@masagu"
-  aboutPic = "images/front-page.png"
+  aboutPic = "images/front-page.webp"
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
