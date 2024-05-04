@@ -21,8 +21,8 @@ $light-title-shadow: 6px 6px 4px rgba(59, 130, 246, .5);
 
 /* Dark theme colors */
 $dark-background: #000000;
-//$dark-background-secondary: #18181BFF;
-$dark-background-secondary: rgba(18, 34, 61, 0.4);
+$dark-background-secondary: #12223D11;
+//$dark-background-secondary: rgba(18, 34, 61, 0.4);
 $dark-background-header: #1b1c1d;
 $dark-color: #a9a9b3;
 $dark-color-variant: white;
@@ -45,6 +45,10 @@ $dark-text-tomato-color: #280902;
 $dark-tomato-color: #801902;
 $tomato-color: #ec2d01;
 $tomato-color-pale: #efad9e;
+
+/* Radial Gradient color */
+$radial-gradient-color: #000099;
+$radial-gradient-highlight: #548aff;
 
 /* Mono Theme */
 $background-gray: #232425;
@@ -136,7 +140,7 @@ html[class*="dark"] {
   --color-text: #{$gray-150};
   --color-text-secondary: #{$gray-450};
   --color-text-footer: #{$gray-400};
-  --color-border: #{$gray-500};
+  --color-border: #{$gray-700};
   --color-border-collapsible-menu: #{$gray-550};
   --color-background: #{$dark-background};
   --color-background-header: #{$dark-background};

@@ -1,3 +1,8 @@
+*, :after, :before {
+  box-sizing: border-box;
+  border: 0 solid var(--color-border)
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
@@ -38,9 +43,7 @@ header {
   -webkit-backdrop-filter: blur(5px);
   width: 100vw;
   padding: 0px calc(15vw - 40px);
-  //30px for laptop L; laptop
-  //align-items: center;
-  //justify-content: center;
+  border-bottom-width: 1px;
   @media (min-width: $md_width) {
     padding: 0 calc(5vw - 10px)
   }
@@ -51,4 +54,40 @@ main {
   @media (min-width: $md_width) {
     padding: 200px 12vw;
   }
+}
+
+
+a {
+  color: inherit;
+  text-decoration: inherit
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sub {
+  bottom: -.25em
+}
+
+menu, ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+[role=button], button {
+  cursor: pointer
+}
+
+audio, canvas, embed, iframe, img, object, svg, video {
+  display: block;
+  vertical-align: middle
+}
+
+[hidden] {
+  display: none
 }

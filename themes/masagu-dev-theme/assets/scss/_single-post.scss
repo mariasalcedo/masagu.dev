@@ -37,15 +37,24 @@
         @include text-base;
         margin: 1.5rem 2rem;
       }
+      h1 {
+        font-family: $font-source-code-pro;
+        @include text-3xl;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+
       h2 {
         font-family: $font-source-code-pro;
         @include text-2xl;
-        line-height: 4rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
       }
 
       pre {
-        @include text-xs;
-        overflow: scroll;
+        @include text-sm;
+        overflow: auto;
+        padding: 1rem;
       }
 
       ol {
