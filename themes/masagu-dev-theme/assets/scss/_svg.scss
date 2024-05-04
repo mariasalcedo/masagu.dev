@@ -1,10 +1,23 @@
 .svg {
-  fill: var(--color-svg-fill);
-  display: flex;
-  overflow-clip-margin: content-box;
-  overflow: visible;
-  width:50px;
-  height:50px;
+
+  &__radial-gradient {
+    display: block;
+    vertical-align: middle;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  &__min {
+    fill: var(--color-svg-fill);
+    display: flex;
+    overflow-clip-margin: content-box;
+    overflow: visible;
+    width:50px;
+    height:50px;
+  }
 
   &__shadow {
     -webkit-filter: var(--shadow-svg-title);
