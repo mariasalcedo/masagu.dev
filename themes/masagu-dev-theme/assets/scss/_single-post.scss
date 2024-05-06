@@ -55,6 +55,8 @@
         @include text-sm;
         overflow: auto;
         padding: 1rem;
+        border: 1px solid var(--color-border);
+        border-radius: 10px;
       }
 
       ol {
@@ -64,6 +66,7 @@
 
       a {
         color: var(--color-single-a-text);
+        text-decoration: underline dotted red;
       }
       ul {
         list-style: circle;
