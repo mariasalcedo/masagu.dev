@@ -28,6 +28,9 @@ This is an AMAZING time saver!
 ```shell
 $ kubectl rollout history deployment my-app --revision=1 > rev1.out
 $ kubectl rollout history deployment my-app --revision=2 > rev2.out
+```
+And then...
+```diff
 $ diff one.out two.out
 1c1
 < deployment.apps/my-app with revision #1
