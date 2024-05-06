@@ -3,6 +3,12 @@
     padding: 1rem
   }
 
+
+  .border {
+    width: 500px;
+
+  }
+
   &__thumbnail {
     min-height: 7rem;
     background-color: var(--color-background-thumbnail-fill);
@@ -10,7 +16,10 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 
+
     @media screen and (min-width: $md_width) {
+      //background: var(--color-background-thumbnail) no-repeat center;
+      //background-size: contain;
       width: 50%;
       height: 300px;
       margin-left: 2rem;
