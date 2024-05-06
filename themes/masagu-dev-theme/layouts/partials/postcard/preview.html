@@ -6,8 +6,9 @@
             <div class="postcard-item">
                 {{- with .Params.thumbnail }}
                 <div class="preview__footer partition">
-                    <div class="preview__thumbnail" style="mask: url('{{ . | absURL}}') no-repeat center; mask-size: contain; background-color: var(--color-background-thumbnail-fill); ">
-                    </div>
+                    <figure class="preview__thumbnail"
+                            style="background-image: url('{{ . | absURL}}')"
+                    ></figure>
                     {{ else }}
                     <div class="preview__footer">
                         {{- end }}

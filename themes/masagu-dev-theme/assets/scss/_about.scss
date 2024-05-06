@@ -65,8 +65,7 @@
   justify-content: flex-start;
 
   @media screen and (max-width: $lg_width) {
-    @include text-lg;
-    font-weight: 700;
+    font-size: 20px;
   }
 }
 
@@ -79,7 +78,7 @@
   height: auto;
   letter-spacing: -0.04em;
   line-height: 1;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 0px 15px;
   text-align: left;
   width: auto;
   max-width: calc(100% - 15px);
@@ -87,7 +86,7 @@
 
 
   @media screen and (max-width: $lg_width) {
-    @include text-lg;
+    font-size: 20px;
   }
 }
 
@@ -157,7 +156,8 @@
 .sd[data-s-474e3e21-7d98-4246-baa5-580f544c15b4] {
   color: var(--color-text);
   font-family: var(--font-source-code-pro);
-  @include text-3xl;
+  font-size: 30px;
+  font-weight: 300;
   height: auto;
   letter-spacing: -0.04em;
   line-height: 1;
@@ -168,7 +168,7 @@
   justify-content: flex-start;
 
   @media screen and (min-width: $tablet_width) {
-    font-size: 40px;
+  font-size: 40px;
   }
 }
 
@@ -197,10 +197,9 @@
     -webkit-backface-visibility: hidden;
     box-sizing: border-box;
     color: #333;
-    transition: .3s cubic-bezier(.4, .4, 0, 1);
+    transition: .3s cubic-bezier(.4,.4,0,1);
     word-spacing: 1px;
   }
-
   &.icon, &.text {
     align-content: center;
     align-items: center;
@@ -211,7 +210,6 @@
     overflow-wrap: anywhere;
     word-break: break-word;
   }
-
   --s-font-d395d5c8: Lato;
   --s-font-a199e08a: Poppins;
   --s-font-829eb72c: Roboto;
@@ -235,10 +233,9 @@
   }
 
 }
-
 .sd[data-s-e76893b8-242a-46b3-93e7-f75f571bbc68] {
   color: var(--color-text);
-  display: flow;
+  flex: none;
   font-family: var(--font);
   font-size: 15px;
   font-weight: 400;
@@ -248,20 +245,15 @@
   text-align: left;
   width: 80%;
   max-width: 80%;
-  padding: 0px;
+  justify-content: flex-start;
 
-  a {
-    color: var(--color-single-a-text);
-    text-decoration: underline dotted;
-  }
-
-  @media screen and (min-width: $md_width) {
+  @media screen and (min-width: 768px) {
     margin: 0px 0px 54px 0px;
   }
 
 }
 
-.sub {
+.sd[data-s-d7a77260-05a0-4188-978f-88eeb9e6e34e] {
   align-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
@@ -271,18 +263,8 @@
   padding: 0px;
   max-width: 100%;
 
-  @media screen and (min-width: $md_width) {
+  @media screen and (min-width: 768px) {
     margin: 90px 0px 0px 0px;
-  }
-
-  &__icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media screen and (min-width: $md_width) {
-      flex-direction: row;
-    }
   }
 }
 

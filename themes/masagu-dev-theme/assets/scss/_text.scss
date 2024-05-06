@@ -31,16 +31,6 @@
   line-height: 2rem; /* 32px */
 }
 
-@mixin text-4xl {
-  font-size: 1.75rem; /* 24px */
-  line-height: 2.25rem; /* 32px */
-}
-
-@mixin text-5xl {
-  font-size: 2rem; /* 24px */
-  line-height: 2.5rem; /* 32px */
-}
-
 @mixin font-thin {
   font-weight: 100;
 }
