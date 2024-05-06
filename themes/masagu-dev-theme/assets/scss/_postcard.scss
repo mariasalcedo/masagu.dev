@@ -16,9 +16,10 @@
   .postcard-item {
     padding: 1rem;
     background-color: var(--color-background-card);
+    border: 2px dashed #0090d8;
     border-radius: .375rem;
     margin: 2rem 0;
-    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.5), 6px 6px 4px rgba(59, 130, 246, .2);
+    //box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.5), 6px 6px 4px rgba(59, 130, 246, .2);
 
     //&:hover {
     //  background-color: var(--color-background-hover);
@@ -35,7 +36,7 @@
       border-bottom: 1px solid #3a62ce;
       padding-bottom: 0.5rem;
       @media screen and (min-width: $xl_width) {
-        @include text-lg;
+        @include text-3xl;
         white-space: normal;
       }
       &__end {
@@ -49,7 +50,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      @include text-xxs;
+      @include text-xs;
       @include font-light;
       font-family: $font-source-code-pro;
       color: var(--color-text-secondary);
@@ -66,7 +67,7 @@
       }
       @media screen and (min-width: $xl_width) {
         margin: 1.5rem 2rem;
-        @include text-sm;
+        @include text-lg;
       }
     }
 

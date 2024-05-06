@@ -107,6 +107,7 @@ html {
   --color-background-overlay: #{$light-background-secondary};
   --color-background-inline-code: #{$gray-100};
   --color-background-card: #{$gray-0};
+  --color-background-thumbnail-fill: #000000;
   --color-background-mark: #fff1a7;
   --color-link: #2563eb;
   --color-navbar-item-inactive: #{$gray-400};
@@ -148,6 +149,7 @@ html[class*="dark"] {
   --color-background-overlay: #{$dark-background-secondary};
   --color-background-inline-code: #{$gray-600};
   --color-background-card: rgba(75, 89, 114, 0.5);
+  --color-background-thumbnail-fill: #FFFFFF;
   --color-background-mark: #fff1a7;
   --color-link: #93c5fd;
   --color-navbar-item-inactive: #{$gray-400};
