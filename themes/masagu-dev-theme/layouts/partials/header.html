@@ -64,12 +64,12 @@
 
 
             </div>
-            <nav aria-label="Main desktop menu" class="menu hidden">
+            <nav aria-label="Main desktop menu" class="menu-desktop hidden">
                 {{ $current_page := .Name }}
                 <ul class="ring-zinc-900/5 dark:ring-white/10">
                     {{ range .Site.Menus.main }}
                     <li>
-                        <a class="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+                        <a class="hover:text-teal-500 dark:hover:text-teal-400"
                            href="{{ .URL }}"
                             {{ if eq $current_page .Name }}
                             style="color: rgb(74, 121, 255);">
@@ -78,6 +78,9 @@
                             >
                             {{ end }}
                             {{ $text := print .Name | safeHTML }} {{ $text }}
+                            {{ if eq .Params.External true }}
+                                {{ partial "svg/open-in-new.svg" . }}
+                            {{ end }}
                         </a>
                     </li>
                     {{ end }}

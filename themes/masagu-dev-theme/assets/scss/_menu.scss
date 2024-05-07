@@ -1,4 +1,4 @@
-.menu {
+.menu-desktop {
   @include text-sm;
   @include font-medium;
   pointer-events: auto;
@@ -17,6 +17,15 @@
     box-shadow: var(--color-menu-shadow);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
+  }
+  a {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .15s;
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    padding: .5rem .75rem;
   }
 }
 

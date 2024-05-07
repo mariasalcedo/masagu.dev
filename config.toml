@@ -31,16 +31,22 @@ paginate = 10
   [markup.goldmark.renderer]
     unsafe = true
 
-[menu]
-  [[menu.main]]
+[menus]
+  [[menus.main]]
     name = "Blog"
     url = "/blog"
     weight = 1
-  [[menu.main]]
-    name = "Github"
-    url = "https://www.github.com/mariasalcedo"
+    [[menus.main.params]]
+      external = false
+  [[menus.main]]
+    name = "About"
+    url = "https://www.linkedin.com/in/maria-salcedo-g/"
     weight = 2
-  [[menu.main]]
+    [[menus.main.params]]
+      external = true
+  [[menus.main]]
     name = "Q&A"
     url = "https://github.com/mariasalcedo/masagu.dev/discussions"
     weight = 3
+    [[menus.main.params]]
+      external = true
