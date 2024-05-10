@@ -7,6 +7,7 @@ $fontsPath: '{{ printf "../%s" (default "fonts/" .Site.Params.fontsDir) }}';
 @import "fonts";
 @import "svg";
 @import "code_colors";
+@import "alerts";
 
 /* Main properties */
 @import "button";

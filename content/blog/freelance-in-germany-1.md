@@ -28,9 +28,6 @@ Luckily, in _Steuerberaterkammer München_'s website, there's a [provided list](
 It has nothing to do with immigration, but with taxes.
 This is mandatory, and usually takes 2 months to get processed. 
 
-Of course, as an non-EU migrant, one's gotta have something like a _Niederlassungserlaubnis_ (permananent residency) or somehow the blessings from the _Ausländerbehörde_ to be able to legally work as a freelancer in Germany.
-Beware then that, without the proper work authorization, unfortunately you cannot work as a freelancer as a non-EU citizen.
-
 Paperwork is relatively easy to fill by oneself since there's tons of info on the internet.
 This form is called _Fragebogen zur steuerlichen Erfassung für Einzelunternehmen_. 
 
@@ -42,6 +39,9 @@ The tax office asks for this, since one's gotta pay taxes in advance.
 Once's this is done, you get two new tax numbers (one for making invoices for VAT, another for identifying as freelancer for end of year income declarations).
 From there on, one can start charging customers appropriately, using the newly received VAT number on your own invoices.
 
+> **Appropriate work authorization:** For non-EU migrants, a _Niederlassungserlaubnis_ (permananent residency) or somehow the blessings from the _Ausländerbehörde_ is required for legally working as a freelancer in Germany.
+{.danger}
+
 ## Things to do in between
 - **To start "networking"**. Going to meetups, conferences, on LinkedIn, etc. Making your own talks, maybe? Just talking about things you enjoy doing will help you find the right folks to network with. Freelancers are usually very friendly, and will not hesitate to connect.
 - **Post your profile on websites**. mostly dedicated to freelance in the DACH region. _freelancermap.de, freelance.de, gulp.de, malt.de_ are just a few of them.
@@ -51,12 +51,16 @@ From there on, one can start charging customers appropriately, using the newly r
 - **Setup new business email(s) and public internet domains.** To define a new domain is tricky. It must be clear and easy for customers to remember.
 - **Get certificates done.** It will help to attract new customers, and predefine what you can/cannot do. Beware, this might box you out, but that's something we can discuss on a different blog post.
 - **Get new telephone number.** Not really mandatory however if you overshare it, beware you might get scams calls/emails.
-- **[EXTREMELY IMPORTANT] Get a business insurance!** I won't make any recommendations on exactly which one to get, however as a software developer, one that additionaly covers cybersec attacks on cloud is very useful.
 - **Get a business bank account.** Mandatory by Finanzamt. I have mixed experiences on getting one. I applied to one bank I am customer of, they rejected me after 3 weeks. I applied to another one, I was approved in 5 mins. Crazy world.
 - **Other optional stuff** Getting on social media (a mastodon account, ideally), security-related tokens, etc etc etc... list can go on and on.
 
-By the way, everything a software developer does in Europe must be complaint with GDPR, otherwise one might get a hefty fine.
-Reading and informing oneself about it is a MUST. Freelancing or not.
+
+> **Get a business insurance!** I won't make any recommendations on exactly which one to get, however as a software developer, one that additionaly covers cybersec attacks on cloud is very useful.
+{.warning}
+
+> **GDPR:** everything a software developer does in Europe must be complaint with GDPR, otherwise one might get a hefty fine.
+> Reading and informing oneself about it is a MUST. Freelancing or not.
+{.danger}
 
 ## What to charge: the biggest question
 Talking to other freelancers in my network, plus taking into account one's own experience/technical skills, might help to estimate how much to charge.
