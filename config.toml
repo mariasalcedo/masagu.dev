@@ -30,6 +30,8 @@ paginate = 10
     tabWidth = 4
   [markup.goldmark.renderer]
     unsafe = true
+  [markup.goldmark.parser.attribute]
+    block = true
 
 [menus]
   [[menus.main]]
