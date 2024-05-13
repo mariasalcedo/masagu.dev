@@ -8,8 +8,7 @@ type: "postcard"
 author: "Maria"
 ---
 
-From where the CNCF came from, and what is trying to achieve: a highly democratized environment of cloud native tools.
-Moreover, to empower tool makers by ensuring innovation, extensibility and interoperability inside an ecosystem with open standards.
+From where the CNCF came from, and what is trying to achieve: a highly democratized environment of cloud native tools. Moreover, to empower tool makers by ensuring innovation, extensibility and interoperability inside an ecosystem with open standards.
 To be able to choose the right tool for the right problem, while multiple solutions to a problem is widely embraced in the community. 
 The following an high level overview of it.
 
