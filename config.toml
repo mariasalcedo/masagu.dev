@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Masagu.dev'
 theme = "masagu-dev-theme"
 paginate = 10
+enableRobotsTXT = true
 
 [params]
   title = "Masagu.dev"

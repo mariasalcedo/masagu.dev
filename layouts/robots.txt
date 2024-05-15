@@ -1,0 +1,25 @@
+User-agent: GPTBot
+{{ range .Pages }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
+Disallow: /
+User-agent: ChatGPT-User
+{{ range .Pages }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
+Disallow: /
+User-agent: Google-Extended
+{{ range .Pages }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
+Disallow: /
+User-agent: CCBot
+{{ range .Pages }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
+Disallow: /
+User-agent: PerplexityBot
+{{ range .Pages }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
+Disallow: /
