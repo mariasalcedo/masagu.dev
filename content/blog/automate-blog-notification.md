@@ -22,7 +22,7 @@ Since I am using Hugo on this website, it conveniently comes with an [Atom's fee
 With it, one can check the latest post's metadata (e.g. title and URL).
 
 Then, with the help of some golang magic:
-1. Using the library [gofeed]("https://github.com/mmcdole/gofeed"), retrieve and parse the feed's metadata.
+1. Using the library [gofeed](https://github.com/mmcdole/gofeed), retrieve and parse the feed's metadata.
 ```golang
     fp := gofeed.NewParser()
     feed, err := fp.ParseURL("https://masagu.dev/index.xml")
