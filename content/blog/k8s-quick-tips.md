@@ -21,6 +21,27 @@ I encourage you to repeatedly train (or use in your daily DevOps life) self-made
 This is certainly the key to improve speed and accuracy.
 In my own experience, the following are the only ones I needed, however this is rather a personal choice.
 
+```shell
+#!/usr/bin/env bash
+
+export k='kubectl'
+
+# for swapping between nodes
+# Usage: kubectx <your node>
+export kubectx='kubectl config use-context'
+
+# setting default namespace
+# Usage: kubens <your namespace>
+export kubens='kubectl config set-context --current-namespace'
+
+# getting the current default namespace
+# Usage: curr-ns
+export curr-ns='kubectl config view | grep namespace'
+
+# getting the current context
+# Usage: curr-ctx
+export curr-ctx='kubectl config current-context'
+```
 
 ## Comparing rollouts
 This is an AMAZING time saver!
