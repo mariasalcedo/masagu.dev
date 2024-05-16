@@ -35,9 +35,9 @@ These are governed by the following Core principles and Specifications.
 
 ### Specifications
 The OCI currently contains three specifications: 
-- **Image**: image index layers, configuration files, file systems, etc.
-- **Runtime**: governs initialization and execution
-- **Distribution**: actions on construction of registries (push, pull, list, tags, delete), outlines how to run a “filesystem bundle” that is unpacked on disk
+- **[Image Spec](https://github.com/opencontainers/image-spec)**: image index layers, configuration files, file systems, etc.
+- **[Runtime Spec](https://github.com/opencontainers/runtime-spec)**: governs initialization and execution
+- **[Distribution Spec](https://github.com/opencontainers/distribution-spec)**: actions on construction of registries (push, pull, list, tags, delete), outlines how to run a “filesystem bundle” that is unpacked on disk
 
 At a high-level an OCI implementation would:
 1. download an OCI Image,
@@ -53,51 +53,51 @@ From this concept, is how tools come into play.
 
 Fundamental Interfaces up to this day are:
 
-1. **Container Runtime Interfaces (CRI)**
+1. **[Container Runtime Interfaces (CRI)](https://github.com/kubernetes/cri-api)**
 Initially provided by docker and rocket, runtime component was originally tightly coupled to the kubernetes source code. It was then switched to Container Runtime Interfaces (CRI). Rtk has been archived, while `dockershim` support has been removed from kubernetes, after 1.20. Some examples of CRIs are:
-- CRI-O
-- container-d
-- kata, etc.
+   - CRI-O
+   - container-d
+   - kata, etc.
 
-2. **Container Network Interfaces (CNI)**
+2. **[Container Network Interfaces (CNI)](https://github.com/containernetworking/cni)**
 CNI's consists of a specification and libraries for writing plugins to configure network interfaces in Linux containers, along with a number of supported plugins. While some CNIs concerns itself only with network connectivity of containers and removing allocated resources when the container is deleted, some others also provide network security policy support, load balancing, etc.
 The kubelet is responsible for setting up the network for new Pods using the CNI plugin specified in the configuration file located in the `/etc/cni/net.d/` directory on the node. Some examples are:
-- Cilium
-- container network interface (CNI) (incubating)
-- Flannel
-- Calico
-- WeaveNet etc.
+   - Cilium
+   - container network interface (CNI) (incubating)
+   - Flannel
+   - Calico
+   - WeaveNet etc.
 
-3. **Container Storage Interfaces (CSI)**
+3. **[Container Storage Interfaces (CSI)](https://github.com/container-storage-interface/spec)**
 Introduced in Kubernetes 1.9 and move to general availability in 1.13, CSI concentrates into how services can consume storage outside of the cluster. Some examples of CSI are:
-- Rook
-- Longhorn
-- cubeFS
-- ceph
-- velero, etc
+   - Rook
+   - Longhorn
+   - cubeFS
+   - ceph
+   - velero, etc
 
-4. **Service mesh interfaces (SMI)**
+4. **[Service mesh interfaces (SMI)](https://smi-spec.io/)**
 As an Orchestration and Management component, example of SMI that integrate with kubernetes are:
-- istio
-- linkerd
-- consul, etc.
+   - istio
+   - linkerd
+   - consul, etc.
 
 5. **Cloud provider Interfaces (CPI)**
 Heavily used by cluster API, CPI describes how the entire ecosystem of interfaces can also be used interchangeably between different platforms.
 Platforms don't provide new functionality, instead, they bundle multiple tools across the different layers together, configuring and fine-tuning them so they are ready to be used. This eases the adoption of cloud native technologies and may even be the only way organizations are able to leverage them. Examples are:
-- Google Cloud
-- Azure
-- Amazon Web Services
-- Digital Ocean, etc.
+   - Google Cloud
+   - Azure
+   - Amazon Web Services
+   - Digital Ocean, etc.
 
 6. **Observability stack**
 This category isn't necessarily an interface, however extremely important.
 It serves tools that monitor across the entire ecosystem, to help flag when something is wrong.
 It simplifies orchestration, standardizing formats and frameworks to ensure visibility and transparency across the stack, collecting:
-- metrics: to be able to diagnose, verify and define the state of an application.
-- logs: high fidelity data for debugging purposes, to be able to recreate step by step what exactly are the functions called within the system
-- traces: specially necessary for service and event oriented architectures, where to serve one request has invoked one or more multiple other services, to be able to recreate a full end-to-end path
-- events: (as a high abstraction level) to provide these historical data points of when exactly an action happened within the system
+   - metrics: to be able to diagnose, verify and define the state of an application.
+   - logs: high fidelity data for debugging purposes, to be able to recreate step by step what exactly are the functions called within the system
+   - traces: specially necessary for service and event oriented architectures, where to serve one request has invoked one or more multiple other services, to be able to recreate a full end-to-end path
+   - events: (as a high abstraction level) to provide these historical data points of when exactly an action happened within the system
 
 Examples are:
 - Opentelemetry
@@ -116,7 +116,7 @@ This layers can be summarized / keyworded as follows:
 - observability -> trace, debug, metrics
 - platform -> cloud managed provisioning options
 
-For getting the big "picture" of how far Kubernetes has been expended can be found at the [Cloud Native Landscape Website](landscape.cncf.io)
+For getting the big "picture" of how far Kubernetes has been expended can be found at the [Cloud Native Landscape Website](https://landscape.cncf.io)
 
 I hope this helps on your way to a successful KCNA exam!
 
