@@ -24,23 +24,23 @@ In my own experience, the following are the only ones I needed, however this is 
 ```shell
 #!/usr/bin/env bash
 
-export k='kubectl'
+alias k='kubectl'
 
 # for swapping between nodes
 # Usage: kubectx <your node>
-export kubectx='kubectl config use-context'
+alias kubectx='kubectl config use-context'
 
 # setting default namespace
 # Usage: kubens <your namespace>
-export kubens='kubectl config set-context --current-namespace'
+alias kubens='kubectl config set-context --current-namespace'
 
 # getting the current default namespace
 # Usage: curr-ns
-export curr-ns='kubectl config view | grep namespace'
+alias curr-ns='kubectl config view | grep namespace'
 
 # getting the current context
 # Usage: curr-ctx
-export curr-ctx='kubectl config current-context'
+alias curr-ctx='kubectl config current-context'
 ```
 
 ## Comparing rollouts
