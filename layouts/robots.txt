@@ -29,8 +29,6 @@ User-agent: *
 Disallow: {{ .RelPermalink }}
 {{ end }}
 
-User-agent: Googlebot
-User-agent: Bingbot
 User-agent: DuckDuckBot
 User-agent: DuckDuckGo
 User-agent: YouBot
