@@ -43,6 +43,11 @@ alias curr-ns='kubectl config view | grep namespace'
 alias curr-ctx='kubectl config current-context'
 ```
 
+> If you don't use alias on a daily basis on your own kubernetes cluster, setting them up for the test will only be a waste of time, and will for sure make you more confused.
+{.danger}
+
+For more aliases, check at the [kubectl quick reference page](https://kubernetes.io/docs/reference/kubectl/quick-reference/).
+
 ## Comparing rollouts
 This is an AMAZING time saver!
 
