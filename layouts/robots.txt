@@ -23,3 +23,14 @@ User-agent: PerplexityBot
 Disallow: {{ .RelPermalink }}
 {{ end }}
 Disallow: /
+
+User-agent: *
+{{ range .Pages }}
+Disallow: {{ .RelPermalink }}
+{{ end }}
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: DuckDuckGo
+User-agent: YouBot
