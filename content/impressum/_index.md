@@ -7,13 +7,11 @@ type: "impressum"
 
 # Impressum
 
-## Angaben gemäß § 5 TMG
+## Kontakt
 
 > Maria Salcedo Guzman \
 > Offenbachstr. 27 \
 > 85598 Baldham 
-
-## Kontakt
 
 > **E-Mail**:\
 > anfrage@masagu.dev
