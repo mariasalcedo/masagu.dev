@@ -9,12 +9,7 @@ type: "impressum"
 
 ## Kontakt
 
-> Maria Salcedo Guzman \
-> Offenbachstr. 27 \
-> 85598 Baldham 
-
-> **E-Mail**:\
-> anfrage@masagu.dev
+> Maria Salcedo Guzman 
 
 
 ## Umsatzsteuer-ID
